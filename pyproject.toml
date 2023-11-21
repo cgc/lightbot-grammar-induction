@@ -1,0 +1,12 @@
+[tool.pytest.ini_options]
+testpaths = [
+    "exp",
+    "generate-exp",
+    "lb",
+    "tests",
+]
+doctest_optionflags = "NORMALIZE_WHITESPACE ELLIPSIS"
+addopts = """
+--doctest-modules
+--doctest-ignore-import-errors
+"""

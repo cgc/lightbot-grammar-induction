@@ -1,0 +1,27 @@
+[
+  {
+    "program": "1BDCE1BCD1|BCDCA|||",
+    "addToData": {"source": ["maps", 7], "typical": true}
+  },
+  {
+    "program": "1CE1EB1|BAECCA|||",
+    "addToData": {"source": ["cgcMaps", 15], "typical": false}
+  },
+  {
+    "program": "EBABDCCCADBBA||||",
+    "addToData": {"source": ["maps", 8], "typical": true}
+  },
+  {
+    "program": "1E1A|BCDCABDCB|||",
+    "addToData": {"source": ["maps", 7], "typical": false}
+  },
+  {
+    "program": "E1DBD1EBE1|CACCA|||",
+    "addToData": {"source": ["cgcMaps", 15], "typical": true}
+  },
+  {
+    "__program": "NOTE: this program is a bit problematic b/c it has a noop, but there's a better version",
+    "program": "1CC1DBBA|EBADC|||",
+    "addToData": {"source": ["maps", 8], "typical": false}
+  }
+]

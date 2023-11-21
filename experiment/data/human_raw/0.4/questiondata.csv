@@ -1,0 +1,1000 @@
+md5:564fcc6c3d7fd861e467f368d30e192c,condition,8
+md5:564fcc6c3d7fd861e467f368d30e192c,counterbalance,0
+md5:564fcc6c3d7fd861e467f368d30e192c,status,1
+md5:f459017580188a2546a9e75c85392093,browser,"Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:f459017580188a2546a9e75c85392093,condition,5
+md5:f459017580188a2546a9e75c85392093,counterbalance,0
+md5:f459017580188a2546a9e75c85392093,status,3
+md5:c8b24e9c1def66158f1cffedd09b4432,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:c8b24e9c1def66158f1cffedd09b4432,error2,"[""[\""Failed to execute 'exitFullscreen' on 'Document': Document not active\"",\""TypeError: Failed to execute 'exitFullscreen' on 'Document': Document not active\\n    at t.trial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:6:102650)\\n    at m (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:135473)\\n    at f (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:134511)\\n    at i.finishTrial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:139652)\\n    at n (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:12:51309)\\n    at https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:12:51705\""]""]"
+md5:c8b24e9c1def66158f1cffedd09b4432,condition,4
+md5:c8b24e9c1def66158f1cffedd09b4432,counterbalance,0
+md5:c8b24e9c1def66158f1cffedd09b4432,status,3
+md5:dd01fe86899e9d2f926ca903bf513dc9,browser,"Mozilla/5.0 (X11; CrOS x86_64 14816.99.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:dd01fe86899e9d2f926ca903bf513dc9,condition,6
+md5:dd01fe86899e9d2f926ca903bf513dc9,counterbalance,0
+md5:dd01fe86899e9d2f926ca903bf513dc9,status,3
+md5:7317fe524aa5d502515ec68149f55c19,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:7317fe524aa5d502515ec68149f55c19,condition,8
+md5:7317fe524aa5d502515ec68149f55c19,counterbalance,0
+md5:7317fe524aa5d502515ec68149f55c19,status,3
+md5:e5312e8c71cf3b1ed3a351cae7e2e510,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:e5312e8c71cf3b1ed3a351cae7e2e510,condition,1
+md5:e5312e8c71cf3b1ed3a351cae7e2e510,counterbalance,0
+md5:e5312e8c71cf3b1ed3a351cae7e2e510,status,3
+md5:c6ad9231eba86e898e94c36756ed2b51,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.134 Safari/537.36 Edg/103.0.1264.71"
+md5:c6ad9231eba86e898e94c36756ed2b51,condition,5
+md5:c6ad9231eba86e898e94c36756ed2b51,counterbalance,0
+md5:c6ad9231eba86e898e94c36756ed2b51,status,3
+md5:f5c09c5641c150612553d805e7d7819f,browser,Mozilla/5.0 (X11; Linux x86_64; rv:102.0) Gecko/20100101 Firefox/102.0
+md5:f5c09c5641c150612553d805e7d7819f,error2,"[""[\""Not in fullscreen mode\"",\""jsPsych.plugins.fullscreen</t.trial@https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:6:102631\\nm@https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:135473\\nf@https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:134512\\nwindow.jsPsych</i.finishTrial@https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:139652\\nn@https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:12:51309\\nonComplete/<@https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:12:51705\\n\""]""]"
+md5:f5c09c5641c150612553d805e7d7819f,condition,5
+md5:f5c09c5641c150612553d805e7d7819f,counterbalance,0
+md5:f5c09c5641c150612553d805e7d7819f,status,3
+md5:844504b22bd9bf25cc508264e7bfd1dd,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:844504b22bd9bf25cc508264e7bfd1dd,error2,"[""[\""Failed to execute 'exitFullscreen' on 'Document': Document not active\"",\""TypeError: Failed to execute 'exitFullscreen' on 'Document': Document not active\\n    at t.trial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:6:102650)\\n    at m (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:135473)\\n    at f (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:134511)\\n    at i.finishTrial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:139652)\\n    at n (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:12:51309)\\n    at https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:12:51705\""]""]"
+md5:844504b22bd9bf25cc508264e7bfd1dd,condition,1
+md5:844504b22bd9bf25cc508264e7bfd1dd,counterbalance,0
+md5:844504b22bd9bf25cc508264e7bfd1dd,status,3
+md5:ba560cf7d22515dc1f2b9ea509df0d06,browser,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.0 Safari/605.1.15"
+md5:ba560cf7d22515dc1f2b9ea509df0d06,condition,5
+md5:ba560cf7d22515dc1f2b9ea509df0d06,counterbalance,0
+md5:ba560cf7d22515dc1f2b9ea509df0d06,status,3
+md5:931151e0e6109a5a27adc32ea757c838,browser,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.6 Safari/605.1.15"
+md5:931151e0e6109a5a27adc32ea757c838,condition,6
+md5:931151e0e6109a5a27adc32ea757c838,counterbalance,0
+md5:931151e0e6109a5a27adc32ea757c838,status,1
+md5:72fb29f204793eac067f69dedcb27677,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:72fb29f204793eac067f69dedcb27677,condition,6
+md5:72fb29f204793eac067f69dedcb27677,counterbalance,0
+md5:72fb29f204793eac067f69dedcb27677,status,3
+md5:563c63980ce39e63715f9c3f2d7ffd61,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:563c63980ce39e63715f9c3f2d7ffd61,condition,2
+md5:563c63980ce39e63715f9c3f2d7ffd61,counterbalance,0
+md5:563c63980ce39e63715f9c3f2d7ffd61,status,3
+md5:66a0b463e92be1723c5664b3887d4a57,browser,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:66a0b463e92be1723c5664b3887d4a57,condition,7
+md5:66a0b463e92be1723c5664b3887d4a57,counterbalance,0
+md5:66a0b463e92be1723c5664b3887d4a57,status,3
+md5:acf3d15730c4470a9db2a6f903932ea2,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:acf3d15730c4470a9db2a6f903932ea2,condition,3
+md5:acf3d15730c4470a9db2a6f903932ea2,counterbalance,0
+md5:acf3d15730c4470a9db2a6f903932ea2,status,3
+md5:5ff06191f796fba9b0b1b829ec11ff9c,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:5ff06191f796fba9b0b1b829ec11ff9c,condition,0
+md5:5ff06191f796fba9b0b1b829ec11ff9c,counterbalance,0
+md5:5ff06191f796fba9b0b1b829ec11ff9c,status,3
+md5:8cac437b9d89af1b276af6017852f8e2,browser,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:8cac437b9d89af1b276af6017852f8e2,condition,3
+md5:8cac437b9d89af1b276af6017852f8e2,counterbalance,0
+md5:8cac437b9d89af1b276af6017852f8e2,status,3
+md5:3f64b074af852c882545cb91c6356651,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.134 Safari/537.36 Edg/103.0.1264.71"
+md5:3f64b074af852c882545cb91c6356651,condition,2
+md5:3f64b074af852c882545cb91c6356651,counterbalance,0
+md5:3f64b074af852c882545cb91c6356651,status,3
+md5:d8275cf2b5f7b056b9fa4c11efc5616d,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:d8275cf2b5f7b056b9fa4c11efc5616d,error2,"[""[\""Failed to execute 'exitFullscreen' on 'Document': Document not active\"",\""TypeError: Failed to execute 'exitFullscreen' on 'Document': Document not active\\n    at t.trial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:6:102650)\\n    at m (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:135473)\\n    at f (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:134511)\\n    at i.finishTrial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:139652)\\n    at n (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:12:51309)\\n    at https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:12:51705\""]""]"
+md5:d8275cf2b5f7b056b9fa4c11efc5616d,condition,7
+md5:d8275cf2b5f7b056b9fa4c11efc5616d,counterbalance,0
+md5:d8275cf2b5f7b056b9fa4c11efc5616d,status,3
+md5:aab1dfbfc0d143c2772a6e35c55fdf1b,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:aab1dfbfc0d143c2772a6e35c55fdf1b,condition,8
+md5:aab1dfbfc0d143c2772a6e35c55fdf1b,counterbalance,0
+md5:aab1dfbfc0d143c2772a6e35c55fdf1b,status,3
+md5:2936359b460b249e5dc2c24c05b9507e,browser,"Mozilla/5.0 (X11; CrOS x86_64 14469.58.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.86 Safari/537.36"
+md5:2936359b460b249e5dc2c24c05b9507e,condition,3
+md5:2936359b460b249e5dc2c24c05b9507e,counterbalance,0
+md5:2936359b460b249e5dc2c24c05b9507e,status,3
+md5:f949d5e6579432e00876ce37610c9c7d,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:f949d5e6579432e00876ce37610c9c7d,condition,9
+md5:f949d5e6579432e00876ce37610c9c7d,counterbalance,0
+md5:f949d5e6579432e00876ce37610c9c7d,status,3
+md5:45bb50949526b60ccd77d409cbcae5bb,browser,"Mozilla/5.0 (X11; CrOS aarch64 14816.131.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:45bb50949526b60ccd77d409cbcae5bb,condition,1
+md5:45bb50949526b60ccd77d409cbcae5bb,counterbalance,0
+md5:45bb50949526b60ccd77d409cbcae5bb,status,3
+md5:0526b10a1b4d8f7d881fa1ee75fa8e08,browser,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:0526b10a1b4d8f7d881fa1ee75fa8e08,error2,"[""[\""Failed to execute 'exitFullscreen' on 'Document': Document not active\"",\""TypeError: Failed to execute 'exitFullscreen' on 'Document': Document not active\\n    at t.trial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:6:102650)\\n    at m (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:135473)\\n    at f (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:134511)\\n    at i.finishTrial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:139652)\\n    at n (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:12:51309)\\n    at https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:12:51977\""]""]"
+md5:0526b10a1b4d8f7d881fa1ee75fa8e08,condition,9
+md5:0526b10a1b4d8f7d881fa1ee75fa8e08,counterbalance,0
+md5:0526b10a1b4d8f7d881fa1ee75fa8e08,status,3
+md5:54306ca87b36f95f2bcc84efc078ad1d,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:54306ca87b36f95f2bcc84efc078ad1d,error2,"[""[\""Error saving data. status: 0, statusText: error\"",\""Error: Error saving data. status: 0, statusText: error\\n    at error (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:6:36751)\\n    at N.e.error (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:128929)\\n    at d (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:25971)\\n    at Object.fireWith [as rejectWith] (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:26773)\\n    at B (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:79280)\\n    at XMLHttpRequest.r (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:82680)\""]""]"
+md5:54306ca87b36f95f2bcc84efc078ad1d,condition,9
+md5:54306ca87b36f95f2bcc84efc078ad1d,counterbalance,0
+md5:54306ca87b36f95f2bcc84efc078ad1d,status,3
+md5:95b53ba2d623c4daec40f023ae8a49e7,browser,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.1.2 Safari/605.1.15"
+md5:95b53ba2d623c4daec40f023ae8a49e7,condition,2
+md5:95b53ba2d623c4daec40f023ae8a49e7,counterbalance,0
+md5:95b53ba2d623c4daec40f023ae8a49e7,status,3
+md5:e299b2b49553ce272d995091a1be7966,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.115 Safari/537.36"
+md5:e299b2b49553ce272d995091a1be7966,condition,9
+md5:e299b2b49553ce272d995091a1be7966,counterbalance,0
+md5:e299b2b49553ce272d995091a1be7966,status,3
+md5:4c82023f373ce97671f1044d37d0a094,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:4c82023f373ce97671f1044d37d0a094,condition,7
+md5:4c82023f373ce97671f1044d37d0a094,counterbalance,0
+md5:4c82023f373ce97671f1044d37d0a094,status,3
+md5:6f023ff4008fa43a4a804b22f3e9a1dd,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:6f023ff4008fa43a4a804b22f3e9a1dd,condition,6
+md5:6f023ff4008fa43a4a804b22f3e9a1dd,counterbalance,0
+md5:6f023ff4008fa43a4a804b22f3e9a1dd,status,3
+md5:9837603db285147cb91ba1033c807585,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:9837603db285147cb91ba1033c807585,error2,"[""[\""aAttribruteValue.parentNode.getAttribute is not a function\"",\""TypeError: aAttribruteValue.parentNode.getAttribute is not a function\\n    at HTMLDocument.<anonymous> (<anonymous>:21:49)\""]""]"
+md5:9837603db285147cb91ba1033c807585,condition,0
+md5:9837603db285147cb91ba1033c807585,counterbalance,0
+md5:9837603db285147cb91ba1033c807585,status,3
+md5:3f7f61b8b977fecf26f6a0a9f6a6c736,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:3f7f61b8b977fecf26f6a0a9f6a6c736,condition,3
+md5:3f7f61b8b977fecf26f6a0a9f6a6c736,counterbalance,0
+md5:3f7f61b8b977fecf26f6a0a9f6a6c736,status,1
+md5:b34f58bb0398e8ef46012965e68b9474,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.134 Safari/537.36 Edg/103.0.1264.71"
+md5:b34f58bb0398e8ef46012965e68b9474,condition,7
+md5:b34f58bb0398e8ef46012965e68b9474,counterbalance,0
+md5:b34f58bb0398e8ef46012965e68b9474,status,3
+md5:296befad408e4de2312cfdf8c8afc855,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:296befad408e4de2312cfdf8c8afc855,condition,8
+md5:296befad408e4de2312cfdf8c8afc855,counterbalance,0
+md5:296befad408e4de2312cfdf8c8afc855,status,1
+md5:1b5bfe66eb92071a4b067770b2f2326c,browser,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:1b5bfe66eb92071a4b067770b2f2326c,error2,"[""[\""Failed to execute 'exitFullscreen' on 'Document': Document not active\"",\""TypeError: Failed to execute 'exitFullscreen' on 'Document': Document not active\\n    at t.trial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:6:102650)\\n    at m (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:135473)\\n    at f (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:134511)\\n    at i.finishTrial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:139652)\\n    at n (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:12:51309)\\n    at https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:12:51705\""]""]"
+md5:1b5bfe66eb92071a4b067770b2f2326c,condition,6
+md5:1b5bfe66eb92071a4b067770b2f2326c,counterbalance,0
+md5:1b5bfe66eb92071a4b067770b2f2326c,status,3
+md5:1367f41226ae3af775a18fb24f776729,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:1367f41226ae3af775a18fb24f776729,condition,2
+md5:1367f41226ae3af775a18fb24f776729,counterbalance,0
+md5:1367f41226ae3af775a18fb24f776729,status,1
+md5:6cd809150c6d454fdff1d142f401c403,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.134 Safari/537.36"
+md5:6cd809150c6d454fdff1d142f401c403,condition,1
+md5:6cd809150c6d454fdff1d142f401c403,counterbalance,0
+md5:6cd809150c6d454fdff1d142f401c403,status,3
+md5:22f328509b73dc771ddff0b89a36c853,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:22f328509b73dc771ddff0b89a36c853,error2,"[""[\""Failed to execute 'exitFullscreen' on 'Document': Document not active\"",\""TypeError: Failed to execute 'exitFullscreen' on 'Document': Document not active\\n    at t.trial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:6:102650)\\n    at m (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:135473)\\n    at f (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:134511)\\n    at i.finishTrial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:139652)\\n    at n (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:12:51309)\\n    at https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:12:51705\""]""]"
+md5:22f328509b73dc771ddff0b89a36c853,condition,6
+md5:22f328509b73dc771ddff0b89a36c853,counterbalance,0
+md5:22f328509b73dc771ddff0b89a36c853,status,3
+md5:8b4385c5b64221f30332c5bdbd25e49f,browser,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:8b4385c5b64221f30332c5bdbd25e49f,condition,7
+md5:8b4385c5b64221f30332c5bdbd25e49f,counterbalance,0
+md5:8b4385c5b64221f30332c5bdbd25e49f,status,3
+md5:ad9cba26420a05aad068f9581e81ece9,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.134 Safari/537.36 Edg/103.0.1264.71"
+md5:ad9cba26420a05aad068f9581e81ece9,condition,4
+md5:ad9cba26420a05aad068f9581e81ece9,counterbalance,0
+md5:ad9cba26420a05aad068f9581e81ece9,status,3
+md5:5e7c0891fb1dda736f4dbdf2ffa60f9e,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:5e7c0891fb1dda736f4dbdf2ffa60f9e,error2,"[""[\""Failed to execute 'exitFullscreen' on 'Document': Document not active\"",\""TypeError: Failed to execute 'exitFullscreen' on 'Document': Document not active\\n    at t.trial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:6:102650)\\n    at m (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:135473)\\n    at f (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:134511)\\n    at i.finishTrial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:139652)\\n    at n (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:12:51309)\\n    at https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:12:51705\""]""]"
+md5:5e7c0891fb1dda736f4dbdf2ffa60f9e,condition,3
+md5:5e7c0891fb1dda736f4dbdf2ffa60f9e,counterbalance,0
+md5:5e7c0891fb1dda736f4dbdf2ffa60f9e,status,3
+md5:e6fa04b3639c8b4647a04b3c8f1679c6,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:e6fa04b3639c8b4647a04b3c8f1679c6,condition,8
+md5:e6fa04b3639c8b4647a04b3c8f1679c6,counterbalance,0
+md5:e6fa04b3639c8b4647a04b3c8f1679c6,status,3
+md5:9c48306b6b2cbac0abf54e24205d8483,browser,"Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36"
+md5:9c48306b6b2cbac0abf54e24205d8483,error2,"[""[\""Failed to execute 'exitFullscreen' on 'Document': Document not active\"",\""TypeError: Failed to execute 'exitFullscreen' on 'Document': Document not active\\n    at Object.t.trial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:6:102650)\\n    at m (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:135473)\\n    at f (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:134511)\\n    at Object.i.finishTrial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:139652)\\n    at n (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:12:51309)\\n    at https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:12:51705\""]""]"
+md5:9c48306b6b2cbac0abf54e24205d8483,condition,4
+md5:9c48306b6b2cbac0abf54e24205d8483,counterbalance,0
+md5:9c48306b6b2cbac0abf54e24205d8483,status,3
+md5:0aad300949c832f1163e3c840f6ae5f3,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:0aad300949c832f1163e3c840f6ae5f3,error2,"[""[\""Failed to execute 'exitFullscreen' on 'Document': Document not active\"",\""TypeError: Failed to execute 'exitFullscreen' on 'Document': Document not active\\n    at t.trial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:6:102650)\\n    at m (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:135473)\\n    at f (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:134511)\\n    at i.finishTrial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:139652)\\n    at n (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:12:51309)\\n    at https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:12:51705\""]""]"
+md5:0aad300949c832f1163e3c840f6ae5f3,condition,3
+md5:0aad300949c832f1163e3c840f6ae5f3,counterbalance,0
+md5:0aad300949c832f1163e3c840f6ae5f3,status,3
+md5:262c64b03d652a936281943e9412abfb,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:262c64b03d652a936281943e9412abfb,condition,6
+md5:262c64b03d652a936281943e9412abfb,counterbalance,0
+md5:262c64b03d652a936281943e9412abfb,status,3
+md5:a872c5de3d13a3d0c43c11495118ef79,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:a872c5de3d13a3d0c43c11495118ef79,condition,2
+md5:a872c5de3d13a3d0c43c11495118ef79,counterbalance,0
+md5:a872c5de3d13a3d0c43c11495118ef79,status,1
+md5:72d4cb767a3642a8779eb6c724a96e59,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:72d4cb767a3642a8779eb6c724a96e59,condition,9
+md5:72d4cb767a3642a8779eb6c724a96e59,counterbalance,0
+md5:72d4cb767a3642a8779eb6c724a96e59,status,3
+md5:a6fc85aacec6a5480001b1ec19a15695,browser,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:a6fc85aacec6a5480001b1ec19a15695,condition,7
+md5:a6fc85aacec6a5480001b1ec19a15695,counterbalance,0
+md5:a6fc85aacec6a5480001b1ec19a15695,status,3
+md5:96581aa093fe61e47f8eee97cee7ad67,browser,Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:102.0) Gecko/20100101 Firefox/102.0
+md5:96581aa093fe61e47f8eee97cee7ad67,error2,"[""[\""Not in fullscreen mode\"",\""jsPsych.plugins.fullscreen</t.trial@https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:6:102631\\nm@https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:135473\\nf@https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:134512\\nwindow.jsPsych</i.finishTrial@https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:139652\\nn@https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:12:51309\\nonComplete/<@https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:12:51705\\n\""]""]"
+md5:96581aa093fe61e47f8eee97cee7ad67,condition,4
+md5:96581aa093fe61e47f8eee97cee7ad67,counterbalance,0
+md5:96581aa093fe61e47f8eee97cee7ad67,status,3
+md5:73d06b271a72bcb994fe2fcb8b760a9b,browser,Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:103.0) Gecko/20100101 Firefox/103.0
+md5:73d06b271a72bcb994fe2fcb8b760a9b,condition,0
+md5:73d06b271a72bcb994fe2fcb8b760a9b,counterbalance,0
+md5:73d06b271a72bcb994fe2fcb8b760a9b,status,3
+md5:fd487f7aa32619c432157d64fe180a55,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:fd487f7aa32619c432157d64fe180a55,condition,0
+md5:fd487f7aa32619c432157d64fe180a55,counterbalance,0
+md5:fd487f7aa32619c432157d64fe180a55,status,3
+md5:fce1be10fd7e4f749e9b5f731056d7f3,browser,Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:103.0) Gecko/20100101 Firefox/103.0
+md5:fce1be10fd7e4f749e9b5f731056d7f3,condition,8
+md5:fce1be10fd7e4f749e9b5f731056d7f3,counterbalance,0
+md5:fce1be10fd7e4f749e9b5f731056d7f3,status,3
+md5:2246a39355e503ee2197aecb61794988,browser,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:2246a39355e503ee2197aecb61794988,condition,6
+md5:2246a39355e503ee2197aecb61794988,counterbalance,0
+md5:2246a39355e503ee2197aecb61794988,status,3
+md5:0d525afd4a55871a7aefd182dbcab070,browser,Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:103.0) Gecko/20100101 Firefox/103.0
+md5:0d525afd4a55871a7aefd182dbcab070,condition,7
+md5:0d525afd4a55871a7aefd182dbcab070,counterbalance,0
+md5:0d525afd4a55871a7aefd182dbcab070,status,3
+md5:deb323b47aed0987578ec439cae3c1ac,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:deb323b47aed0987578ec439cae3c1ac,condition,3
+md5:deb323b47aed0987578ec439cae3c1ac,counterbalance,0
+md5:deb323b47aed0987578ec439cae3c1ac,status,3
+md5:a6012e0885849ea71a583960c21d1098,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:a6012e0885849ea71a583960c21d1098,error2,"[""[\""Failed to execute 'exitFullscreen' on 'Document': Document not active\"",\""TypeError: Failed to execute 'exitFullscreen' on 'Document': Document not active\\n    at t.trial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:6:102650)\\n    at m (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:135473)\\n    at f (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:134511)\\n    at i.finishTrial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:139652)\\n    at n (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:12:51309)\\n    at https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:12:51705\""]""]"
+md5:a6012e0885849ea71a583960c21d1098,condition,1
+md5:a6012e0885849ea71a583960c21d1098,counterbalance,0
+md5:a6012e0885849ea71a583960c21d1098,status,3
+md5:d697eadbd08ca5fe024b6a43f2f70174,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:d697eadbd08ca5fe024b6a43f2f70174,error2,"[""[\""Error saving data. status: 0, statusText: error\"",\""Error: Error saving data. status: 0, statusText: error\\n    at error (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:6:36751)\\n    at N.e.error (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:128929)\\n    at d (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:25971)\\n    at Object.fireWith [as rejectWith] (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:26773)\\n    at B (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:79280)\\n    at XMLHttpRequest.r (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:82680)\""]"",""[\""Error saving data. status: 0, statusText: error\"",\""Error: Error saving data. status: 0, statusText: error\\n    at error (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:6:36751)\\n    at N.e.error (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:128929)\\n    at d (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:25971)\\n    at Object.fireWith [as rejectWith] (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:26773)\\n    at B (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:79280)\\n    at XMLHttpRequest.r (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:82680)\""]"",""[\""Error saving data. status: 0, statusText: error\"",\""Error: Error saving data. status: 0, statusText: error\\n    at error (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:6:36751)\\n    at N.e.error (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:128929)\\n    at d (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:25971)\\n    at Object.fireWith [as rejectWith] (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:26773)\\n    at B (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:79280)\\n    at XMLHttpRequest.r (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:82680)\""]"",""[\""Error saving data. status: 0, statusText: error\"",\""Error: Error saving data. status: 0, statusText: error\\n    at error (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:6:36751)\\n    at N.e.error (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:128929)\\n    at d (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:25971)\\n    at Object.fireWith [as rejectWith] (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:26773)\\n    at B (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:79280)\\n    at XMLHttpRequest.r (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:82680)\""]"",""[\""Error saving data. status: 0, statusText: error\"",\""Error: Error saving data. status: 0, statusText: error\\n    at error (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:6:36751)\\n    at N.e.error (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:128929)\\n    at d (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:25971)\\n    at Object.fireWith [as rejectWith] (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:26773)\\n    at B (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:79280)\\n    at XMLHttpRequest.r (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:82680)\""]"",""[\""Error saving data. status: 0, statusText: error\"",\""Error: Error saving data. status: 0, statusText: error\\n    at error (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:6:36751)\\n    at N.e.error (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:128929)\\n    at d (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:25971)\\n    at Object.fireWith [as rejectWith] (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:26773)\\n    at B (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:79280)\\n    at XMLHttpRequest.r (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:82680)\""]"",""[\""Error saving data. status: 0, statusText: error\"",\""Error: Error saving data. status: 0, statusText: error\\n    at error (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:6:36751)\\n    at N.e.error (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:128929)\\n    at d (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:25971)\\n    at Object.fireWith [as rejectWith] (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:26773)\\n    at B (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:79280)\\n    at XMLHttpRequest.r (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:82680)\""]"",""[\""Error saving data. status: 0, statusText: error\"",\""Error: Error saving data. status: 0, statusText: error\\n    at error (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:6:36751)\\n    at N.e.error (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:128929)\\n    at d (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:25971)\\n    at Object.fireWith [as rejectWith] (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:26773)\\n    at B (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:79280)\\n    at XMLHttpRequest.r (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:82680)\""]"",""[\""Error saving data. status: 0, statusText: error\"",\""Error: Error saving data. status: 0, statusText: error\\n    at error (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:6:36751)\\n    at N.e.error (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:128929)\\n    at d (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:25971)\\n    at Object.fireWith [as rejectWith] (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:26773)\\n    at B (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:79280)\\n    at XMLHttpRequest.r (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:82680)\""]"",""[\""Error saving data. status: 0, statusText: error\"",\""Error: Error saving data. status: 0, statusText: error\\n    at error (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:6:36751)\\n    at N.e.error (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:128929)\\n    at d (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:25971)\\n    at Object.fireWith [as rejectWith] (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:26773)\\n    at B (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:79280)\\n    at XMLHttpRequest.r (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:82680)\""]"",""[\""Error saving data. status: 0, statusText: error\"",\""Error: Error saving data. status: 0, statusText: error\\n    at error (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:6:36751)\\n    at N.e.error (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:128929)\\n    at d (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:25971)\\n    at Object.fireWith [as rejectWith] (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:26773)\\n    at B (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:79280)\\n    at XMLHttpRequest.r (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:82680)\""]"",""[\""Error saving data. status: 0, statusText: error\"",\""Error: Error saving data. status: 0, statusText: error\\n    at error (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:6:36751)\\n    at N.e.error (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:128929)\\n    at d (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:25971)\\n    at Object.fireWith [as rejectWith] (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:26773)\\n    at B (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:79280)\\n    at XMLHttpRequest.r (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:82680)\""]"",""[\""Error saving data. status: 0, statusText: error\"",\""Error: Error saving data. status: 0, statusText: error\\n    at error (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:6:36751)\\n    at N.e.error (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:128929)\\n    at d (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:25971)\\n    at Object.fireWith [as rejectWith] (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:26773)\\n    at B (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:79280)\\n    at XMLHttpRequest.r (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:82680)\""]""]"
+md5:d697eadbd08ca5fe024b6a43f2f70174,condition,7
+md5:d697eadbd08ca5fe024b6a43f2f70174,counterbalance,0
+md5:d697eadbd08ca5fe024b6a43f2f70174,status,3
+md5:e5eaeeccdb6b6c8af3d6e6e52f02ff46,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:e5eaeeccdb6b6c8af3d6e6e52f02ff46,condition,4
+md5:e5eaeeccdb6b6c8af3d6e6e52f02ff46,counterbalance,0
+md5:e5eaeeccdb6b6c8af3d6e6e52f02ff46,status,3
+md5:a6831b654a549f945b6b3ad3b25d8282,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:a6831b654a549f945b6b3ad3b25d8282,condition,7
+md5:a6831b654a549f945b6b3ad3b25d8282,counterbalance,0
+md5:a6831b654a549f945b6b3ad3b25d8282,status,3
+md5:3f0ac392fbeb3bcac634751beb62c17c,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:3f0ac392fbeb3bcac634751beb62c17c,error2,"[""[\""Failed to execute 'exitFullscreen' on 'Document': Document not active\"",\""TypeError: Failed to execute 'exitFullscreen' on 'Document': Document not active\\n    at t.trial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:6:102650)\\n    at m (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:135473)\\n    at f (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:134511)\\n    at i.finishTrial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:139652)\\n    at n (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:12:51309)\\n    at https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:12:51705\""]""]"
+md5:3f0ac392fbeb3bcac634751beb62c17c,condition,1
+md5:3f0ac392fbeb3bcac634751beb62c17c,counterbalance,0
+md5:3f0ac392fbeb3bcac634751beb62c17c,status,3
+md5:2340439abacc06d3f657a80fddbbc45a,browser,"Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:2340439abacc06d3f657a80fddbbc45a,condition,2
+md5:2340439abacc06d3f657a80fddbbc45a,counterbalance,0
+md5:2340439abacc06d3f657a80fddbbc45a,status,1
+md5:7bd1ff9d189a03d1a32aea5c85c7d618,browser,Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:102.0) Gecko/20100101 Firefox/102.0
+md5:7bd1ff9d189a03d1a32aea5c85c7d618,condition,4
+md5:7bd1ff9d189a03d1a32aea5c85c7d618,counterbalance,0
+md5:7bd1ff9d189a03d1a32aea5c85c7d618,status,3
+md5:1bfa404a798ef8b8084ecc0ae35c6c31,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:1bfa404a798ef8b8084ecc0ae35c6c31,error2,"[""[\""Failed to execute 'exitFullscreen' on 'Document': Document not active\"",\""TypeError: Failed to execute 'exitFullscreen' on 'Document': Document not active\\n    at t.trial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:6:102650)\\n    at m (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:135473)\\n    at f (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:134511)\\n    at i.finishTrial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:139652)\\n    at n (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:12:51309)\\n    at https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:12:51705\""]""]"
+md5:1bfa404a798ef8b8084ecc0ae35c6c31,condition,9
+md5:1bfa404a798ef8b8084ecc0ae35c6c31,counterbalance,0
+md5:1bfa404a798ef8b8084ecc0ae35c6c31,status,3
+md5:6336fbbdbfd3ea2256946637a9cac339,browser,Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:103.0) Gecko/20100101 Firefox/103.0
+md5:6336fbbdbfd3ea2256946637a9cac339,condition,5
+md5:6336fbbdbfd3ea2256946637a9cac339,counterbalance,0
+md5:6336fbbdbfd3ea2256946637a9cac339,status,3
+md5:4b46e9b324c0dea8ef1df55faf9f66f7,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:4b46e9b324c0dea8ef1df55faf9f66f7,condition,2
+md5:4b46e9b324c0dea8ef1df55faf9f66f7,counterbalance,0
+md5:4b46e9b324c0dea8ef1df55faf9f66f7,status,1
+md5:d84f8a21ef2f5220de5276510a7e9ace,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:d84f8a21ef2f5220de5276510a7e9ace,error2,"[""[\""Failed to execute 'exitFullscreen' on 'Document': Document not active\"",\""TypeError: Failed to execute 'exitFullscreen' on 'Document': Document not active\\n    at t.trial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:6:102650)\\n    at m (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:135473)\\n    at f (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:134511)\\n    at i.finishTrial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:139652)\\n    at n (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:12:51309)\\n    at https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:12:51705\""]""]"
+md5:d84f8a21ef2f5220de5276510a7e9ace,condition,4
+md5:d84f8a21ef2f5220de5276510a7e9ace,counterbalance,0
+md5:d84f8a21ef2f5220de5276510a7e9ace,status,3
+md5:03fce7e670d32a79f2f41b0aba2088bf,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:03fce7e670d32a79f2f41b0aba2088bf,condition,0
+md5:03fce7e670d32a79f2f41b0aba2088bf,counterbalance,0
+md5:03fce7e670d32a79f2f41b0aba2088bf,status,3
+md5:1ca73509a533eb640cd7879ceb5b31a6,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.134 Safari/537.36"
+md5:1ca73509a533eb640cd7879ceb5b31a6,condition,9
+md5:1ca73509a533eb640cd7879ceb5b31a6,counterbalance,0
+md5:1ca73509a533eb640cd7879ceb5b31a6,status,3
+md5:67e2a6bfd0cd8771532c26a5abf14ebf,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:67e2a6bfd0cd8771532c26a5abf14ebf,condition,6
+md5:67e2a6bfd0cd8771532c26a5abf14ebf,counterbalance,0
+md5:67e2a6bfd0cd8771532c26a5abf14ebf,status,3
+md5:ae881243ceccb5e345c908e18c4ac223,browser,Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:103.0) Gecko/20100101 Firefox/103.0
+md5:ae881243ceccb5e345c908e18c4ac223,condition,2
+md5:ae881243ceccb5e345c908e18c4ac223,counterbalance,0
+md5:ae881243ceccb5e345c908e18c4ac223,status,3
+md5:9d5bac5a808399e1009e6bdc03956e99,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:9d5bac5a808399e1009e6bdc03956e99,condition,3
+md5:9d5bac5a808399e1009e6bdc03956e99,counterbalance,0
+md5:9d5bac5a808399e1009e6bdc03956e99,status,3
+md5:1144a2118e58b98dfced06413b4f67a1,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.134 Safari/537.36 Edg/103.0.1264.71"
+md5:1144a2118e58b98dfced06413b4f67a1,condition,4
+md5:1144a2118e58b98dfced06413b4f67a1,counterbalance,0
+md5:1144a2118e58b98dfced06413b4f67a1,status,3
+md5:00b4f4fc4783dfa8e09cf90a7664dd7b,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.134 Safari/537.36"
+md5:00b4f4fc4783dfa8e09cf90a7664dd7b,condition,9
+md5:00b4f4fc4783dfa8e09cf90a7664dd7b,counterbalance,0
+md5:00b4f4fc4783dfa8e09cf90a7664dd7b,status,3
+md5:2c0b8883cca9d257de944e96fa2c59f1,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:2c0b8883cca9d257de944e96fa2c59f1,error2,"[""[\""aAttribruteValue.parentNode.getAttribute is not a function\"",\""TypeError: aAttribruteValue.parentNode.getAttribute is not a function\\n    at HTMLDocument.<anonymous> (<anonymous>:21:43)\""]""]"
+md5:2c0b8883cca9d257de944e96fa2c59f1,condition,2
+md5:2c0b8883cca9d257de944e96fa2c59f1,counterbalance,0
+md5:2c0b8883cca9d257de944e96fa2c59f1,status,3
+md5:273986dbf90e0084e7575facf9666eb3,error2,"[""[\""chain is not set up\"",null]""]"
+md5:273986dbf90e0084e7575facf9666eb3,browser,"Mozilla/5.0 (X11; CrOS x86_64 14816.99.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:273986dbf90e0084e7575facf9666eb3,condition,9
+md5:273986dbf90e0084e7575facf9666eb3,counterbalance,0
+md5:273986dbf90e0084e7575facf9666eb3,status,3
+md5:13eb0685d1cb0c6c7342f3b81cd20b43,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:13eb0685d1cb0c6c7342f3b81cd20b43,condition,2
+md5:13eb0685d1cb0c6c7342f3b81cd20b43,counterbalance,0
+md5:13eb0685d1cb0c6c7342f3b81cd20b43,status,3
+md5:7e86b3d24af0c8dbcb5e7abb0cee0d11,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:7e86b3d24af0c8dbcb5e7abb0cee0d11,condition,4
+md5:7e86b3d24af0c8dbcb5e7abb0cee0d11,counterbalance,0
+md5:7e86b3d24af0c8dbcb5e7abb0cee0d11,status,3
+md5:6810bfdf442fa0d7640e6ab8982eb63e,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36 OPR/89.0.4447.64"
+md5:6810bfdf442fa0d7640e6ab8982eb63e,condition,5
+md5:6810bfdf442fa0d7640e6ab8982eb63e,counterbalance,0
+md5:6810bfdf442fa0d7640e6ab8982eb63e,status,3
+md5:59200bba4c3ea1597b76d8338ba7851c,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:59200bba4c3ea1597b76d8338ba7851c,condition,1
+md5:59200bba4c3ea1597b76d8338ba7851c,counterbalance,0
+md5:59200bba4c3ea1597b76d8338ba7851c,status,3
+md5:bc3e27a0521192f02d26a4ceee17a18b,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:bc3e27a0521192f02d26a4ceee17a18b,condition,7
+md5:bc3e27a0521192f02d26a4ceee17a18b,counterbalance,0
+md5:bc3e27a0521192f02d26a4ceee17a18b,status,3
+md5:63a20460bf6cb5948a90d826f6e3cf8c,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:63a20460bf6cb5948a90d826f6e3cf8c,condition,3
+md5:63a20460bf6cb5948a90d826f6e3cf8c,counterbalance,0
+md5:63a20460bf6cb5948a90d826f6e3cf8c,status,3
+md5:75ee40c32e394a5f1f7542c4eaa5f8ec,browser,"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:75ee40c32e394a5f1f7542c4eaa5f8ec,condition,3
+md5:75ee40c32e394a5f1f7542c4eaa5f8ec,counterbalance,0
+md5:75ee40c32e394a5f1f7542c4eaa5f8ec,status,3
+md5:6fd73875fc889f19bf6a8833a140a3d3,browser,Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:103.0) Gecko/20100101 Firefox/103.0
+md5:6fd73875fc889f19bf6a8833a140a3d3,condition,2
+md5:6fd73875fc889f19bf6a8833a140a3d3,counterbalance,0
+md5:6fd73875fc889f19bf6a8833a140a3d3,status,3
+md5:4f701363c0b0f207aebfdea2ea47aab0,browser,"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.101 Safari/537.36"
+md5:4f701363c0b0f207aebfdea2ea47aab0,condition,7
+md5:4f701363c0b0f207aebfdea2ea47aab0,counterbalance,0
+md5:4f701363c0b0f207aebfdea2ea47aab0,status,1
+md5:86015bd0112cd4e9b20997d93b92b4fe,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:86015bd0112cd4e9b20997d93b92b4fe,condition,7
+md5:86015bd0112cd4e9b20997d93b92b4fe,counterbalance,0
+md5:86015bd0112cd4e9b20997d93b92b4fe,status,3
+md5:a78ff3559e017c921d31f6c11bf6823d,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:a78ff3559e017c921d31f6c11bf6823d,error2,"[""[\""Failed to execute 'exitFullscreen' on 'Document': Document not active\"",\""TypeError: Failed to execute 'exitFullscreen' on 'Document': Document not active\\n    at t.trial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:6:102650)\\n    at m (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:135473)\\n    at f (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:134511)\\n    at i.finishTrial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:139652)\\n    at n (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:12:51309)\\n    at https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:12:51705\""]""]"
+md5:a78ff3559e017c921d31f6c11bf6823d,condition,7
+md5:a78ff3559e017c921d31f6c11bf6823d,counterbalance,0
+md5:a78ff3559e017c921d31f6c11bf6823d,status,3
+md5:70c3b2d66f96fd48d492c64615781024,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:70c3b2d66f96fd48d492c64615781024,condition,3
+md5:70c3b2d66f96fd48d492c64615781024,counterbalance,0
+md5:70c3b2d66f96fd48d492c64615781024,status,3
+md5:7eee1c44584159925901c0def5f39a2a,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:7eee1c44584159925901c0def5f39a2a,condition,2
+md5:7eee1c44584159925901c0def5f39a2a,counterbalance,0
+md5:7eee1c44584159925901c0def5f39a2a,status,3
+md5:4eaed8d3ab135b1b38b5979c8990b613,browser,Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:103.0) Gecko/20100101 Firefox/103.0
+md5:4eaed8d3ab135b1b38b5979c8990b613,condition,9
+md5:4eaed8d3ab135b1b38b5979c8990b613,counterbalance,0
+md5:4eaed8d3ab135b1b38b5979c8990b613,status,3
+md5:fe9a6676039132dd0edc19577c2c509d,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:fe9a6676039132dd0edc19577c2c509d,error2,"[""[\""Failed to execute 'exitFullscreen' on 'Document': Document not active\"",\""TypeError: Failed to execute 'exitFullscreen' on 'Document': Document not active\\n    at t.trial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:6:102650)\\n    at m (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:135473)\\n    at f (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:134511)\\n    at i.finishTrial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:139652)\\n    at n (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:12:51309)\\n    at https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:12:51705\""]""]"
+md5:fe9a6676039132dd0edc19577c2c509d,condition,6
+md5:fe9a6676039132dd0edc19577c2c509d,counterbalance,0
+md5:fe9a6676039132dd0edc19577c2c509d,status,3
+md5:d2326eb3da1895a9b0ff36bdcf938590,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:d2326eb3da1895a9b0ff36bdcf938590,condition,4
+md5:d2326eb3da1895a9b0ff36bdcf938590,counterbalance,0
+md5:d2326eb3da1895a9b0ff36bdcf938590,status,3
+md5:af13f9a5cccadfe227e07d50043e5291,browser,Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:103.0) Gecko/20100101 Firefox/103.0
+md5:af13f9a5cccadfe227e07d50043e5291,condition,6
+md5:af13f9a5cccadfe227e07d50043e5291,counterbalance,0
+md5:af13f9a5cccadfe227e07d50043e5291,status,3
+md5:0d382acf34b820464dfd394dd59886a9,browser,Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:103.0) Gecko/20100101 Firefox/103.0
+md5:0d382acf34b820464dfd394dd59886a9,error2,"[""[\""Not in fullscreen mode\"",\""jsPsych.plugins.fullscreen</t.trial@https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:6:102631\\nm@https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:135473\\nf@https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:134512\\nwindow.jsPsych</i.finishTrial@https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:139652\\nn@https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:12:51309\\nonComplete/<@https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:12:51705\\n\""]""]"
+md5:0d382acf34b820464dfd394dd59886a9,condition,8
+md5:0d382acf34b820464dfd394dd59886a9,counterbalance,0
+md5:0d382acf34b820464dfd394dd59886a9,status,3
+md5:18553ca980e7883b2a58ec28c7ddc4a3,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:18553ca980e7883b2a58ec28c7ddc4a3,condition,6
+md5:18553ca980e7883b2a58ec28c7ddc4a3,counterbalance,0
+md5:18553ca980e7883b2a58ec28c7ddc4a3,status,3
+md5:ce7fc83fecc57398266aeda243a4edfd,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:ce7fc83fecc57398266aeda243a4edfd,condition,0
+md5:ce7fc83fecc57398266aeda243a4edfd,counterbalance,0
+md5:ce7fc83fecc57398266aeda243a4edfd,status,1
+md5:96733e69043f2ed520a57cf03b54fab8,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:96733e69043f2ed520a57cf03b54fab8,condition,4
+md5:96733e69043f2ed520a57cf03b54fab8,counterbalance,0
+md5:96733e69043f2ed520a57cf03b54fab8,status,3
+md5:fdb66278fc90ce387730b86b15db5a7b,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:fdb66278fc90ce387730b86b15db5a7b,condition,4
+md5:fdb66278fc90ce387730b86b15db5a7b,counterbalance,0
+md5:fdb66278fc90ce387730b86b15db5a7b,status,3
+md5:6834eb4df13a9f04263a6125fe289d74,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:6834eb4df13a9f04263a6125fe289d74,condition,5
+md5:6834eb4df13a9f04263a6125fe289d74,counterbalance,0
+md5:6834eb4df13a9f04263a6125fe289d74,status,3
+md5:5ff91645b6bba61fec070ede21a47e50,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:5ff91645b6bba61fec070ede21a47e50,condition,8
+md5:5ff91645b6bba61fec070ede21a47e50,counterbalance,0
+md5:5ff91645b6bba61fec070ede21a47e50,status,3
+md5:df72011c43209c069c802c18e912b93a,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:df72011c43209c069c802c18e912b93a,condition,9
+md5:df72011c43209c069c802c18e912b93a,counterbalance,0
+md5:df72011c43209c069c802c18e912b93a,status,3
+md5:017eec1f1514ec722c386bb87fa841ea,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:017eec1f1514ec722c386bb87fa841ea,condition,1
+md5:017eec1f1514ec722c386bb87fa841ea,counterbalance,0
+md5:017eec1f1514ec722c386bb87fa841ea,status,3
+md5:57e14dd548636471fb994adb8113c8e2,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36 OPR/89.0.4447.64 (Edition std-1)"
+md5:57e14dd548636471fb994adb8113c8e2,condition,6
+md5:57e14dd548636471fb994adb8113c8e2,counterbalance,0
+md5:57e14dd548636471fb994adb8113c8e2,status,3
+md5:e8490a871119eb2f744fb48483a16208,browser,Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:103.0) Gecko/20100101 Firefox/103.0
+md5:e8490a871119eb2f744fb48483a16208,error2,"[""[\""Not in fullscreen mode\"",\""jsPsych.plugins.fullscreen</t.trial@https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:6:102631\\nm@https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:135473\\nf@https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:134512\\nwindow.jsPsych</i.finishTrial@https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:139652\\nn@https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:12:51309\\nonComplete/<@https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:12:51705\\n\""]""]"
+md5:e8490a871119eb2f744fb48483a16208,condition,4
+md5:e8490a871119eb2f744fb48483a16208,counterbalance,0
+md5:e8490a871119eb2f744fb48483a16208,status,3
+md5:14f36f8f6979dd6fedebad3219a8365b,browser,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:14f36f8f6979dd6fedebad3219a8365b,condition,0
+md5:14f36f8f6979dd6fedebad3219a8365b,counterbalance,0
+md5:14f36f8f6979dd6fedebad3219a8365b,status,3
+md5:6ddcb21986838cc58d0dc895ade12fd2,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:6ddcb21986838cc58d0dc895ade12fd2,condition,3
+md5:6ddcb21986838cc58d0dc895ade12fd2,counterbalance,0
+md5:6ddcb21986838cc58d0dc895ade12fd2,status,3
+md5:eaddfa74002f3e2d33281f327fc147cd,browser,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:eaddfa74002f3e2d33281f327fc147cd,condition,9
+md5:eaddfa74002f3e2d33281f327fc147cd,counterbalance,0
+md5:eaddfa74002f3e2d33281f327fc147cd,status,3
+md5:6e8f853492852cb0bed83f58ec64f19a,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:6e8f853492852cb0bed83f58ec64f19a,condition,2
+md5:6e8f853492852cb0bed83f58ec64f19a,counterbalance,0
+md5:6e8f853492852cb0bed83f58ec64f19a,status,3
+md5:1def687821e196a7534d93090e71582a,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:1def687821e196a7534d93090e71582a,condition,0
+md5:1def687821e196a7534d93090e71582a,counterbalance,0
+md5:1def687821e196a7534d93090e71582a,status,3
+md5:b7adf6b4f433324e8c788267e23741ff,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:b7adf6b4f433324e8c788267e23741ff,condition,0
+md5:b7adf6b4f433324e8c788267e23741ff,counterbalance,0
+md5:b7adf6b4f433324e8c788267e23741ff,status,3
+md5:cc3fb720b750cee8e60cef6aa2bca726,browser,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:cc3fb720b750cee8e60cef6aa2bca726,condition,8
+md5:cc3fb720b750cee8e60cef6aa2bca726,counterbalance,0
+md5:cc3fb720b750cee8e60cef6aa2bca726,status,3
+md5:50e0236756bafcff12dc575f7552c985,browser,"Mozilla/5.0 (X11; CrOS x86_64 14092.77.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.107 Safari/537.36"
+md5:50e0236756bafcff12dc575f7552c985,condition,8
+md5:50e0236756bafcff12dc575f7552c985,counterbalance,0
+md5:50e0236756bafcff12dc575f7552c985,status,1
+md5:daa6af1866b2dfd862848a8519a0e0f6,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:daa6af1866b2dfd862848a8519a0e0f6,condition,1
+md5:daa6af1866b2dfd862848a8519a0e0f6,counterbalance,0
+md5:daa6af1866b2dfd862848a8519a0e0f6,status,3
+md5:9dc4faf02c64d24ab9e56c297239c6cc,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:9dc4faf02c64d24ab9e56c297239c6cc,error2,"[""[\""Failed to execute 'exitFullscreen' on 'Document': Document not active\"",\""TypeError: Failed to execute 'exitFullscreen' on 'Document': Document not active\\n    at t.trial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:6:102650)\\n    at m (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:135473)\\n    at f (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:134511)\\n    at i.finishTrial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:139652)\\n    at n (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:12:51309)\\n    at https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:12:51705\""]""]"
+md5:9dc4faf02c64d24ab9e56c297239c6cc,condition,8
+md5:9dc4faf02c64d24ab9e56c297239c6cc,counterbalance,0
+md5:9dc4faf02c64d24ab9e56c297239c6cc,status,3
+md5:158b73c1066cafb960fafb54099a76b2,browser,Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:103.0) Gecko/20100101 Firefox/103.0
+md5:158b73c1066cafb960fafb54099a76b2,condition,9
+md5:158b73c1066cafb960fafb54099a76b2,counterbalance,0
+md5:158b73c1066cafb960fafb54099a76b2,status,3
+md5:c98fe2e4fa4edf125b6d3be876cfb643,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:c98fe2e4fa4edf125b6d3be876cfb643,condition,3
+md5:c98fe2e4fa4edf125b6d3be876cfb643,counterbalance,0
+md5:c98fe2e4fa4edf125b6d3be876cfb643,status,1
+md5:5940ae918b076f261475677ee8232d6e,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:5940ae918b076f261475677ee8232d6e,condition,1
+md5:5940ae918b076f261475677ee8232d6e,counterbalance,0
+md5:5940ae918b076f261475677ee8232d6e,status,3
+md5:f4a5f564111a0ed3dac1d58a7c5d0b67,browser,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:f4a5f564111a0ed3dac1d58a7c5d0b67,condition,0
+md5:f4a5f564111a0ed3dac1d58a7c5d0b67,counterbalance,0
+md5:f4a5f564111a0ed3dac1d58a7c5d0b67,status,3
+md5:4511ac1aef0e6e820f7bf3cdb418c457,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:4511ac1aef0e6e820f7bf3cdb418c457,condition,4
+md5:4511ac1aef0e6e820f7bf3cdb418c457,counterbalance,0
+md5:4511ac1aef0e6e820f7bf3cdb418c457,status,3
+md5:0859e51a792a8d38bc22819896876f52,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:0859e51a792a8d38bc22819896876f52,condition,4
+md5:0859e51a792a8d38bc22819896876f52,counterbalance,0
+md5:0859e51a792a8d38bc22819896876f52,status,3
+md5:cb64c29564bd6aac265b2981e81d9737,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:cb64c29564bd6aac265b2981e81d9737,condition,3
+md5:cb64c29564bd6aac265b2981e81d9737,counterbalance,0
+md5:cb64c29564bd6aac265b2981e81d9737,status,1
+md5:cb105e87f0247a7c7d06a3bdbbeb0e08,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:cb105e87f0247a7c7d06a3bdbbeb0e08,error2,"[""[\""Failed to execute 'exitFullscreen' on 'Document': Document not active\"",\""TypeError: Failed to execute 'exitFullscreen' on 'Document': Document not active\\n    at t.trial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:6:102650)\\n    at m (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:135473)\\n    at f (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:134511)\\n    at i.finishTrial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:139652)\\n    at n (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:12:51309)\\n    at https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:12:51705\""]""]"
+md5:cb105e87f0247a7c7d06a3bdbbeb0e08,condition,1
+md5:cb105e87f0247a7c7d06a3bdbbeb0e08,counterbalance,0
+md5:cb105e87f0247a7c7d06a3bdbbeb0e08,status,3
+md5:7085a1790780c9fdf8f613f61d5b8f1d,browser,"Mozilla/5.0 (X11; CrOS x86_64 14588.123.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.0.0 Safari/537.36"
+md5:7085a1790780c9fdf8f613f61d5b8f1d,condition,0
+md5:7085a1790780c9fdf8f613f61d5b8f1d,counterbalance,0
+md5:7085a1790780c9fdf8f613f61d5b8f1d,status,3
+md5:60d6469588fcd9fa5692811e1f441600,browser,Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:103.0) Gecko/20100101 Firefox/103.0
+md5:60d6469588fcd9fa5692811e1f441600,condition,0
+md5:60d6469588fcd9fa5692811e1f441600,counterbalance,0
+md5:60d6469588fcd9fa5692811e1f441600,status,3
+md5:b51a0d1404b0c442db4ded3b36b0453e,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:b51a0d1404b0c442db4ded3b36b0453e,condition,9
+md5:b51a0d1404b0c442db4ded3b36b0453e,counterbalance,0
+md5:b51a0d1404b0c442db4ded3b36b0453e,status,3
+md5:b0da8b90ac9e41ee39797ad07e2c3437,browser,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.1 Safari/605.1.15"
+md5:b0da8b90ac9e41ee39797ad07e2c3437,condition,5
+md5:b0da8b90ac9e41ee39797ad07e2c3437,counterbalance,0
+md5:b0da8b90ac9e41ee39797ad07e2c3437,status,3
+md5:ef8daf31d3532f2468eae95f184ce8c0,browser,"Mozilla/5.0 (X11; CrOS x86_64 14816.131.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:ef8daf31d3532f2468eae95f184ce8c0,condition,8
+md5:ef8daf31d3532f2468eae95f184ce8c0,counterbalance,0
+md5:ef8daf31d3532f2468eae95f184ce8c0,status,3
+md5:c4a59df3b9129aaf05a0445bf49f903c,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:c4a59df3b9129aaf05a0445bf49f903c,condition,9
+md5:c4a59df3b9129aaf05a0445bf49f903c,counterbalance,0
+md5:c4a59df3b9129aaf05a0445bf49f903c,status,3
+md5:7efb0208988adb7b7ffb974d57c40ab0,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:7efb0208988adb7b7ffb974d57c40ab0,error2,"[""[\""Failed to execute 'exitFullscreen' on 'Document': Document not active\"",\""TypeError: Failed to execute 'exitFullscreen' on 'Document': Document not active\\n    at t.trial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:6:102650)\\n    at m (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:135473)\\n    at f (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:134511)\\n    at i.finishTrial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:139652)\\n    at n (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:12:51309)\\n    at https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:12:51705\""]""]"
+md5:7efb0208988adb7b7ffb974d57c40ab0,condition,8
+md5:7efb0208988adb7b7ffb974d57c40ab0,counterbalance,0
+md5:7efb0208988adb7b7ffb974d57c40ab0,status,3
+md5:7221a52baa0adb2024fe3a4f2ee166fd,browser,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.3 Safari/605.1.15"
+md5:7221a52baa0adb2024fe3a4f2ee166fd,condition,8
+md5:7221a52baa0adb2024fe3a4f2ee166fd,counterbalance,0
+md5:7221a52baa0adb2024fe3a4f2ee166fd,status,3
+md5:24faf75f52ce6ebcffafb9f3873a982a,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:24faf75f52ce6ebcffafb9f3873a982a,error2,"[""[\""Failed to execute 'exitFullscreen' on 'Document': Document not active\"",\""TypeError: Failed to execute 'exitFullscreen' on 'Document': Document not active\\n    at t.trial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:6:102650)\\n    at m (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:135473)\\n    at f (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:134511)\\n    at i.finishTrial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:139652)\\n    at n (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:12:51309)\\n    at https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:12:51705\""]""]"
+md5:24faf75f52ce6ebcffafb9f3873a982a,condition,8
+md5:24faf75f52ce6ebcffafb9f3873a982a,counterbalance,0
+md5:24faf75f52ce6ebcffafb9f3873a982a,status,3
+md5:df1cb44759bb01290a6eadc003aac1d3,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:df1cb44759bb01290a6eadc003aac1d3,condition,3
+md5:df1cb44759bb01290a6eadc003aac1d3,counterbalance,0
+md5:df1cb44759bb01290a6eadc003aac1d3,status,3
+md5:1b5071bdb6de86f47c3c982fb81981e8,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.134 Safari/537.36"
+md5:1b5071bdb6de86f47c3c982fb81981e8,condition,2
+md5:1b5071bdb6de86f47c3c982fb81981e8,counterbalance,0
+md5:1b5071bdb6de86f47c3c982fb81981e8,status,3
+md5:a30ab0cf0b2f51440a028d8d0528346b,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:a30ab0cf0b2f51440a028d8d0528346b,condition,6
+md5:a30ab0cf0b2f51440a028d8d0528346b,counterbalance,0
+md5:a30ab0cf0b2f51440a028d8d0528346b,status,1
+md5:f92f9597af21a4ef8719cc5eb47d1248,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:f92f9597af21a4ef8719cc5eb47d1248,condition,3
+md5:f92f9597af21a4ef8719cc5eb47d1248,counterbalance,0
+md5:f92f9597af21a4ef8719cc5eb47d1248,status,1
+md5:72d2dafde8fc23a0552606d68326c957,browser,Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:102.0) Gecko/20100101 Firefox/102.0
+md5:72d2dafde8fc23a0552606d68326c957,error2,"[""[\""Not in fullscreen mode\"",\""jsPsych.plugins.fullscreen</t.trial@https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:6:102631\\nm@https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:135473\\nf@https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:134512\\nwindow.jsPsych</i.finishTrial@https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:5:139652\\nn@https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:12:51309\\nonComplete/<@https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.00d00771.js:12:51705\\n\""]""]"
+md5:72d2dafde8fc23a0552606d68326c957,condition,9
+md5:72d2dafde8fc23a0552606d68326c957,counterbalance,0
+md5:72d2dafde8fc23a0552606d68326c957,status,3
+md5:c6f93beb1c838592e6799081e53ba927,browser,Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:103.0) Gecko/20100101 Firefox/103.0
+md5:c6f93beb1c838592e6799081e53ba927,condition,8
+md5:c6f93beb1c838592e6799081e53ba927,counterbalance,0
+md5:c6f93beb1c838592e6799081e53ba927,status,3
+md5:70c48ac95776705b043facdad6a9b758,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:70c48ac95776705b043facdad6a9b758,error2,"[""[\""Failed to execute 'exitFullscreen' on 'Document': Document not active\"",\""TypeError: Failed to execute 'exitFullscreen' on 'Document': Document not active\\n    at t.trial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:6:102650)\\n    at m (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:135473)\\n    at f (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:134511)\\n    at i.finishTrial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:139652)\\n    at n (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:12:51309)\\n    at https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:12:51705\""]""]"
+md5:70c48ac95776705b043facdad6a9b758,condition,3
+md5:70c48ac95776705b043facdad6a9b758,counterbalance,0
+md5:70c48ac95776705b043facdad6a9b758,status,3
+md5:70cde1474f6b559d1d5be4c9d818be9d,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:70cde1474f6b559d1d5be4c9d818be9d,condition,0
+md5:70cde1474f6b559d1d5be4c9d818be9d,counterbalance,0
+md5:70cde1474f6b559d1d5be4c9d818be9d,status,3
+md5:2840a01fc4feac2df4fba3eef49b30dc,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.134 Safari/537.36 Edg/103.0.1264.71"
+md5:2840a01fc4feac2df4fba3eef49b30dc,condition,2
+md5:2840a01fc4feac2df4fba3eef49b30dc,counterbalance,0
+md5:2840a01fc4feac2df4fba3eef49b30dc,status,1
+md5:6cf978f757da8ecaafec1855ec948165,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:6cf978f757da8ecaafec1855ec948165,condition,4
+md5:6cf978f757da8ecaafec1855ec948165,counterbalance,0
+md5:6cf978f757da8ecaafec1855ec948165,status,1
+md5:ed4fbb9f4659bab895b6622c1be1c3a8,browser,"Mozilla/5.0 (X11; CrOS x86_64 14816.131.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:ed4fbb9f4659bab895b6622c1be1c3a8,condition,9
+md5:ed4fbb9f4659bab895b6622c1be1c3a8,counterbalance,0
+md5:ed4fbb9f4659bab895b6622c1be1c3a8,status,1
+md5:454e8c1ee7ccd7031a97667936389f23,condition,4
+md5:454e8c1ee7ccd7031a97667936389f23,counterbalance,0
+md5:454e8c1ee7ccd7031a97667936389f23,status,1
+md5:4c412436e1ea8c7dc8c9016ad235138f,browser,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:4c412436e1ea8c7dc8c9016ad235138f,condition,0
+md5:4c412436e1ea8c7dc8c9016ad235138f,counterbalance,0
+md5:4c412436e1ea8c7dc8c9016ad235138f,status,3
+md5:b8d926cadb82a1b39c3ca7fd78844353,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:b8d926cadb82a1b39c3ca7fd78844353,condition,6
+md5:b8d926cadb82a1b39c3ca7fd78844353,counterbalance,0
+md5:b8d926cadb82a1b39c3ca7fd78844353,status,3
+md5:8fbe46cfe078e10f6e7d499967d4db6e,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:8fbe46cfe078e10f6e7d499967d4db6e,error2,"[""[\""Failed to execute 'exitFullscreen' on 'Document': Document not active\"",\""TypeError: Failed to execute 'exitFullscreen' on 'Document': Document not active\\n    at t.trial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:6:102650)\\n    at m (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:135473)\\n    at f (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:134511)\\n    at i.finishTrial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:139652)\\n    at n (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:12:51309)\\n    at https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:12:51705\""]""]"
+md5:8fbe46cfe078e10f6e7d499967d4db6e,condition,8
+md5:8fbe46cfe078e10f6e7d499967d4db6e,counterbalance,0
+md5:8fbe46cfe078e10f6e7d499967d4db6e,status,3
+md5:d896875e7961ac591243ed9ca016ac70,browser,Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:99.0) Gecko/20100101 Firefox/99.0
+md5:d896875e7961ac591243ed9ca016ac70,condition,5
+md5:d896875e7961ac591243ed9ca016ac70,counterbalance,0
+md5:d896875e7961ac591243ed9ca016ac70,status,3
+md5:af266c15dee4f55b335c8e9d3b1da57c,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:af266c15dee4f55b335c8e9d3b1da57c,condition,3
+md5:af266c15dee4f55b335c8e9d3b1da57c,counterbalance,0
+md5:af266c15dee4f55b335c8e9d3b1da57c,status,3
+md5:52691ed6e956297dfe1c8d6e73bd8afe,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:52691ed6e956297dfe1c8d6e73bd8afe,condition,0
+md5:52691ed6e956297dfe1c8d6e73bd8afe,counterbalance,0
+md5:52691ed6e956297dfe1c8d6e73bd8afe,status,3
+md5:a948063852442e6bdafad647cf0b936b,browser,Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:103.0) Gecko/20100101 Firefox/103.0
+md5:a948063852442e6bdafad647cf0b936b,condition,8
+md5:a948063852442e6bdafad647cf0b936b,counterbalance,0
+md5:a948063852442e6bdafad647cf0b936b,status,1
+md5:403eeec37f234a2a52f5094b106e859c,browser,Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:102.0) Gecko/20100101 Firefox/102.0
+md5:403eeec37f234a2a52f5094b106e859c,condition,2
+md5:403eeec37f234a2a52f5094b106e859c,counterbalance,0
+md5:403eeec37f234a2a52f5094b106e859c,status,3
+md5:8354dc7f129c80336ee0c027a762ca20,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:8354dc7f129c80336ee0c027a762ca20,condition,8
+md5:8354dc7f129c80336ee0c027a762ca20,counterbalance,0
+md5:8354dc7f129c80336ee0c027a762ca20,status,3
+md5:60276fbb8b6a5c6c540d132d69a5acc5,browser,Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:102.0) Gecko/20100101 Firefox/102.0
+md5:60276fbb8b6a5c6c540d132d69a5acc5,condition,8
+md5:60276fbb8b6a5c6c540d132d69a5acc5,counterbalance,0
+md5:60276fbb8b6a5c6c540d132d69a5acc5,status,3
+md5:5cea880a3d92addba825c3847073ab1d,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:5cea880a3d92addba825c3847073ab1d,condition,6
+md5:5cea880a3d92addba825c3847073ab1d,counterbalance,0
+md5:5cea880a3d92addba825c3847073ab1d,status,1
+md5:0d11939f7bcaf431261989b024db0f38,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:0d11939f7bcaf431261989b024db0f38,condition,5
+md5:0d11939f7bcaf431261989b024db0f38,counterbalance,0
+md5:0d11939f7bcaf431261989b024db0f38,status,1
+md5:1c62d6fd2215331f3383a19d8f759a24,browser,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.115 Safari/537.36 OPR/88.0.4412.65 (Edition std-1)"
+md5:1c62d6fd2215331f3383a19d8f759a24,condition,5
+md5:1c62d6fd2215331f3383a19d8f759a24,counterbalance,0
+md5:1c62d6fd2215331f3383a19d8f759a24,status,1
+md5:e936155b4c6eb41f3e235d6794d79e8b,browser,"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:e936155b4c6eb41f3e235d6794d79e8b,error2,"[""[\""Failed to execute 'exitFullscreen' on 'Document': Document not active\"",\""TypeError: Failed to execute 'exitFullscreen' on 'Document': Document not active\\n    at t.trial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:6:102650)\\n    at m (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:135473)\\n    at f (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:134511)\\n    at i.finishTrial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:139652)\\n    at n (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:12:51309)\\n    at https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:12:51705\""]""]"
+md5:e936155b4c6eb41f3e235d6794d79e8b,condition,7
+md5:e936155b4c6eb41f3e235d6794d79e8b,counterbalance,0
+md5:e936155b4c6eb41f3e235d6794d79e8b,status,3
+md5:98cfdcf42b9605316c4b78a827d9de34,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:98cfdcf42b9605316c4b78a827d9de34,condition,1
+md5:98cfdcf42b9605316c4b78a827d9de34,counterbalance,0
+md5:98cfdcf42b9605316c4b78a827d9de34,status,3
+md5:ed0dd49d1056262bf8d4e6dd45b126e1,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:ed0dd49d1056262bf8d4e6dd45b126e1,condition,1
+md5:ed0dd49d1056262bf8d4e6dd45b126e1,counterbalance,0
+md5:ed0dd49d1056262bf8d4e6dd45b126e1,status,3
+md5:9a1c79e1a04a9463485e773edf339dc0,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:9a1c79e1a04a9463485e773edf339dc0,error2,"[""[\""Error saving data. status: 0, statusText: error\"",\""Error: Error saving data. status: 0, statusText: error\\n    at error (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:6:36751)\\n    at N.e.error (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:128929)\\n    at d (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:25971)\\n    at Object.fireWith [as rejectWith] (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:26773)\\n    at B (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:79280)\\n    at XMLHttpRequest.r (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:82680)\""]""]"
+md5:9a1c79e1a04a9463485e773edf339dc0,condition,7
+md5:9a1c79e1a04a9463485e773edf339dc0,counterbalance,0
+md5:9a1c79e1a04a9463485e773edf339dc0,status,1
+md5:f99f74201b48d2247a9db2ebd4716227,browser,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:f99f74201b48d2247a9db2ebd4716227,condition,2
+md5:f99f74201b48d2247a9db2ebd4716227,counterbalance,0
+md5:f99f74201b48d2247a9db2ebd4716227,status,3
+md5:b18c88ddff65b7937a42468f61a6def8,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:b18c88ddff65b7937a42468f61a6def8,condition,5
+md5:b18c88ddff65b7937a42468f61a6def8,counterbalance,0
+md5:b18c88ddff65b7937a42468f61a6def8,status,3
+md5:54d112e7e82528070c2035d82a59f4cc,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:54d112e7e82528070c2035d82a59f4cc,error2,"[""[\""Failed to execute 'exitFullscreen' on 'Document': Document not active\"",\""TypeError: Failed to execute 'exitFullscreen' on 'Document': Document not active\\n    at t.trial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:6:102650)\\n    at m (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:135473)\\n    at f (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:134511)\\n    at i.finishTrial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:139652)\\n    at n (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:12:51309)\\n    at https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:12:51705\""]""]"
+md5:54d112e7e82528070c2035d82a59f4cc,condition,8
+md5:54d112e7e82528070c2035d82a59f4cc,counterbalance,0
+md5:54d112e7e82528070c2035d82a59f4cc,status,3
+md5:a9dfd818f0b35671553f3e5696aa87d3,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:a9dfd818f0b35671553f3e5696aa87d3,condition,7
+md5:a9dfd818f0b35671553f3e5696aa87d3,counterbalance,0
+md5:a9dfd818f0b35671553f3e5696aa87d3,status,3
+md5:6db7d54ac6f10b57b568fd8ec5ce9910,browser,Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:103.0) Gecko/20100101 Firefox/103.0
+md5:6db7d54ac6f10b57b568fd8ec5ce9910,condition,0
+md5:6db7d54ac6f10b57b568fd8ec5ce9910,counterbalance,0
+md5:6db7d54ac6f10b57b568fd8ec5ce9910,status,3
+md5:aa71e5697099aea2e28d10e52e28fce9,browser,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:aa71e5697099aea2e28d10e52e28fce9,condition,9
+md5:aa71e5697099aea2e28d10e52e28fce9,counterbalance,0
+md5:aa71e5697099aea2e28d10e52e28fce9,status,3
+md5:e62700535cbec75a594c8738cd0d763f,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.134 Safari/537.36"
+md5:e62700535cbec75a594c8738cd0d763f,condition,5
+md5:e62700535cbec75a594c8738cd0d763f,counterbalance,0
+md5:e62700535cbec75a594c8738cd0d763f,status,3
+md5:5c380645094af2f22d649e8fdb7560e2,browser,Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:103.0) Gecko/20100101 Firefox/103.0
+md5:5c380645094af2f22d649e8fdb7560e2,condition,0
+md5:5c380645094af2f22d649e8fdb7560e2,counterbalance,0
+md5:5c380645094af2f22d649e8fdb7560e2,status,3
+md5:99efa5fdaac53901aa8ac299126e501d,browser,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.0 Safari/605.1.15"
+md5:99efa5fdaac53901aa8ac299126e501d,condition,1
+md5:99efa5fdaac53901aa8ac299126e501d,counterbalance,0
+md5:99efa5fdaac53901aa8ac299126e501d,status,1
+md5:306d58740a90beb63e788983552f1807,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:306d58740a90beb63e788983552f1807,error2,"[""[\""Failed to execute 'exitFullscreen' on 'Document': Document not active\"",\""TypeError: Failed to execute 'exitFullscreen' on 'Document': Document not active\\n    at t.trial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:6:102650)\\n    at m (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:135473)\\n    at f (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:134511)\\n    at i.finishTrial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:139652)\\n    at n (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:12:51309)\\n    at https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:12:51705\""]""]"
+md5:306d58740a90beb63e788983552f1807,condition,5
+md5:306d58740a90beb63e788983552f1807,counterbalance,0
+md5:306d58740a90beb63e788983552f1807,status,3
+md5:a5a11bb81c0ccf10057a9dfcc23daa72,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:a5a11bb81c0ccf10057a9dfcc23daa72,condition,2
+md5:a5a11bb81c0ccf10057a9dfcc23daa72,counterbalance,0
+md5:a5a11bb81c0ccf10057a9dfcc23daa72,status,3
+md5:06f8cbb9646238a6d75bcd1816f6054e,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:06f8cbb9646238a6d75bcd1816f6054e,condition,5
+md5:06f8cbb9646238a6d75bcd1816f6054e,counterbalance,0
+md5:06f8cbb9646238a6d75bcd1816f6054e,status,3
+md5:8ef0a29104afdf8dfcbfc1e7a983fc78,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:8ef0a29104afdf8dfcbfc1e7a983fc78,condition,4
+md5:8ef0a29104afdf8dfcbfc1e7a983fc78,counterbalance,0
+md5:8ef0a29104afdf8dfcbfc1e7a983fc78,status,1
+md5:a248ff2ae639e7976fb9d25e58f54ab7,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:a248ff2ae639e7976fb9d25e58f54ab7,condition,5
+md5:a248ff2ae639e7976fb9d25e58f54ab7,counterbalance,0
+md5:a248ff2ae639e7976fb9d25e58f54ab7,status,1
+md5:5ca59c2ca56ca8b0cf563b2e531a1a13,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:5ca59c2ca56ca8b0cf563b2e531a1a13,condition,3
+md5:5ca59c2ca56ca8b0cf563b2e531a1a13,counterbalance,0
+md5:5ca59c2ca56ca8b0cf563b2e531a1a13,status,3
+md5:09ea4ef2c706c177e9eaa7ce5bec8608,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:09ea4ef2c706c177e9eaa7ce5bec8608,condition,5
+md5:09ea4ef2c706c177e9eaa7ce5bec8608,counterbalance,0
+md5:09ea4ef2c706c177e9eaa7ce5bec8608,status,3
+md5:7085bc52d8659b5083756288785580fc,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:7085bc52d8659b5083756288785580fc,condition,4
+md5:7085bc52d8659b5083756288785580fc,counterbalance,0
+md5:7085bc52d8659b5083756288785580fc,status,3
+md5:3d4cdbfd82aa2ed159ad8835f3afc677,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:3d4cdbfd82aa2ed159ad8835f3afc677,condition,2
+md5:3d4cdbfd82aa2ed159ad8835f3afc677,counterbalance,0
+md5:3d4cdbfd82aa2ed159ad8835f3afc677,status,3
+md5:5260d5fc13d490a1139c40f52d9ca033,browser,"Mozilla/5.0 (X11; CrOS x86_64 14816.131.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:5260d5fc13d490a1139c40f52d9ca033,condition,5
+md5:5260d5fc13d490a1139c40f52d9ca033,counterbalance,0
+md5:5260d5fc13d490a1139c40f52d9ca033,status,1
+md5:a158d7b3df16996276ba68eed0b3c1d3,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.134 Safari/537.36"
+md5:a158d7b3df16996276ba68eed0b3c1d3,condition,6
+md5:a158d7b3df16996276ba68eed0b3c1d3,counterbalance,0
+md5:a158d7b3df16996276ba68eed0b3c1d3,status,3
+md5:4067d58f563fa422dc5b3ce64df52cd3,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:4067d58f563fa422dc5b3ce64df52cd3,error2,"[""[\""Failed to execute 'exitFullscreen' on 'Document': Document not active\"",\""TypeError: Failed to execute 'exitFullscreen' on 'Document': Document not active\\n    at t.trial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:6:102650)\\n    at m (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:135473)\\n    at f (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:134511)\\n    at i.finishTrial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:139652)\\n    at n (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:12:51309)\\n    at https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:12:51705\""]""]"
+md5:4067d58f563fa422dc5b3ce64df52cd3,condition,1
+md5:4067d58f563fa422dc5b3ce64df52cd3,counterbalance,0
+md5:4067d58f563fa422dc5b3ce64df52cd3,status,3
+md5:14b5a0178ca8dee2f32212fb94b0feb8,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:14b5a0178ca8dee2f32212fb94b0feb8,condition,4
+md5:14b5a0178ca8dee2f32212fb94b0feb8,counterbalance,0
+md5:14b5a0178ca8dee2f32212fb94b0feb8,status,3
+md5:d0d6cde23899676e5458cbea2e9cfa26,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:d0d6cde23899676e5458cbea2e9cfa26,error2,"[""[\""Failed to execute 'exitFullscreen' on 'Document': Document not active\"",\""TypeError: Failed to execute 'exitFullscreen' on 'Document': Document not active\\n    at t.trial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:6:102650)\\n    at m (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:135473)\\n    at f (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:134511)\\n    at i.finishTrial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:139652)\\n    at n (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:12:51309)\\n    at https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:12:51705\""]""]"
+md5:d0d6cde23899676e5458cbea2e9cfa26,condition,2
+md5:d0d6cde23899676e5458cbea2e9cfa26,counterbalance,0
+md5:d0d6cde23899676e5458cbea2e9cfa26,status,3
+md5:b2f07fc7ff72960f9ffad83238228439,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:b2f07fc7ff72960f9ffad83238228439,error2,"[""[\""Failed to execute 'exitFullscreen' on 'Document': Document not active\"",\""TypeError: Failed to execute 'exitFullscreen' on 'Document': Document not active\\n    at t.trial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:6:102650)\\n    at m (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:135473)\\n    at f (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:134511)\\n    at i.finishTrial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:139652)\\n    at n (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:12:51309)\\n    at https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:12:51705\""]""]"
+md5:b2f07fc7ff72960f9ffad83238228439,condition,7
+md5:b2f07fc7ff72960f9ffad83238228439,counterbalance,0
+md5:b2f07fc7ff72960f9ffad83238228439,status,3
+md5:75f612d204421987e20b41259c4ec5fe,browser,Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:103.0) Gecko/20100101 Firefox/103.0
+md5:75f612d204421987e20b41259c4ec5fe,condition,2
+md5:75f612d204421987e20b41259c4ec5fe,counterbalance,0
+md5:75f612d204421987e20b41259c4ec5fe,status,3
+md5:714f85a5a946209af4527cc9dc10ee1d,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:714f85a5a946209af4527cc9dc10ee1d,error2,"[""[\""Failed to execute 'exitFullscreen' on 'Document': Document not active\"",\""TypeError: Failed to execute 'exitFullscreen' on 'Document': Document not active\\n    at t.trial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:6:102650)\\n    at m (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:135473)\\n    at f (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:134511)\\n    at i.finishTrial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:139652)\\n    at n (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:12:51309)\\n    at https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:12:51705\""]""]"
+md5:714f85a5a946209af4527cc9dc10ee1d,condition,0
+md5:714f85a5a946209af4527cc9dc10ee1d,counterbalance,0
+md5:714f85a5a946209af4527cc9dc10ee1d,status,3
+md5:136ece9ae229cca054163366b443b01f,condition,9
+md5:136ece9ae229cca054163366b443b01f,counterbalance,0
+md5:136ece9ae229cca054163366b443b01f,status,1
+md5:c1f2a3ab8abe082b648220edb67dd7bf,browser,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Safari/537.36"
+md5:c1f2a3ab8abe082b648220edb67dd7bf,error2,"[""[\""Failed to execute 'exitFullscreen' on 'Document': Document not active\"",\""TypeError: Failed to execute 'exitFullscreen' on 'Document': Document not active\\n    at Object.t.trial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:6:102650)\\n    at m (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:135473)\\n    at f (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:134511)\\n    at Object.i.finishTrial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:139652)\\n    at n (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:12:51309)\\n    at https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:12:51705\""]""]"
+md5:c1f2a3ab8abe082b648220edb67dd7bf,condition,5
+md5:c1f2a3ab8abe082b648220edb67dd7bf,counterbalance,0
+md5:c1f2a3ab8abe082b648220edb67dd7bf,status,3
+md5:e01b8e6933c1b4b3efd0f5dfa9eb081c,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:e01b8e6933c1b4b3efd0f5dfa9eb081c,condition,2
+md5:e01b8e6933c1b4b3efd0f5dfa9eb081c,counterbalance,0
+md5:e01b8e6933c1b4b3efd0f5dfa9eb081c,status,3
+md5:b80ecda912273d0945e650f411807ffa,browser,Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:103.0) Gecko/20100101 Firefox/103.0
+md5:b80ecda912273d0945e650f411807ffa,condition,3
+md5:b80ecda912273d0945e650f411807ffa,counterbalance,0
+md5:b80ecda912273d0945e650f411807ffa,status,3
+md5:a9db4a512829e48a9ed85cac38dfdded,browser,Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:102.0) Gecko/20100101 Firefox/102.0
+md5:a9db4a512829e48a9ed85cac38dfdded,condition,8
+md5:a9db4a512829e48a9ed85cac38dfdded,counterbalance,0
+md5:a9db4a512829e48a9ed85cac38dfdded,status,3
+md5:f273e2c281a12da271d7c86caa12000f,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:f273e2c281a12da271d7c86caa12000f,condition,8
+md5:f273e2c281a12da271d7c86caa12000f,counterbalance,0
+md5:f273e2c281a12da271d7c86caa12000f,status,1
+md5:c40183ab53d8cf35d53dce7f6c8a171a,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:c40183ab53d8cf35d53dce7f6c8a171a,condition,5
+md5:c40183ab53d8cf35d53dce7f6c8a171a,counterbalance,0
+md5:c40183ab53d8cf35d53dce7f6c8a171a,status,1
+md5:66e1ce9960b7d81de158a4d99abb54cc,browser,"Mozilla/5.0 (X11; CrOS aarch64 14816.131.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:66e1ce9960b7d81de158a4d99abb54cc,error2,"[""[\""Failed to execute 'exitFullscreen' on 'Document': Document not active\"",\""TypeError: Failed to execute 'exitFullscreen' on 'Document': Document not active\\n    at t.trial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:6:102650)\\n    at m (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:135473)\\n    at f (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:134511)\\n    at i.finishTrial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:139652)\\n    at n (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:12:51309)\\n    at https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:12:51705\""]""]"
+md5:66e1ce9960b7d81de158a4d99abb54cc,condition,3
+md5:66e1ce9960b7d81de158a4d99abb54cc,counterbalance,0
+md5:66e1ce9960b7d81de158a4d99abb54cc,status,3
+md5:4ec3a9db5b54e37e2a91c418606d8f5f,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:4ec3a9db5b54e37e2a91c418606d8f5f,error2,"[""[\""Failed to execute 'exitFullscreen' on 'Document': Document not active\"",\""TypeError: Failed to execute 'exitFullscreen' on 'Document': Document not active\\n    at t.trial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:6:102650)\\n    at m (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:135473)\\n    at f (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:134511)\\n    at i.finishTrial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:139652)\\n    at n (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:12:51309)\\n    at https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:12:51705\""]""]"
+md5:4ec3a9db5b54e37e2a91c418606d8f5f,condition,6
+md5:4ec3a9db5b54e37e2a91c418606d8f5f,counterbalance,0
+md5:4ec3a9db5b54e37e2a91c418606d8f5f,status,3
+md5:2ec0a4d86643ba7ab4752140dcde677e,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:2ec0a4d86643ba7ab4752140dcde677e,condition,8
+md5:2ec0a4d86643ba7ab4752140dcde677e,counterbalance,0
+md5:2ec0a4d86643ba7ab4752140dcde677e,status,3
+md5:8c43bec3733bb9976c197bff02dbf4e2,browser,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.134 Safari/537.36"
+md5:8c43bec3733bb9976c197bff02dbf4e2,condition,8
+md5:8c43bec3733bb9976c197bff02dbf4e2,counterbalance,0
+md5:8c43bec3733bb9976c197bff02dbf4e2,status,3
+md5:ef53379789c3d35705bf5b9622d6be56,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:ef53379789c3d35705bf5b9622d6be56,condition,6
+md5:ef53379789c3d35705bf5b9622d6be56,counterbalance,0
+md5:ef53379789c3d35705bf5b9622d6be56,status,3
+md5:4afc193f7fba21a349ce06e5a3e6fc4c,browser,Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:103.0) Gecko/20100101 Firefox/103.0
+md5:4afc193f7fba21a349ce06e5a3e6fc4c,condition,6
+md5:4afc193f7fba21a349ce06e5a3e6fc4c,counterbalance,0
+md5:4afc193f7fba21a349ce06e5a3e6fc4c,status,1
+md5:f4f62f68fa67bee8ea74f587e05b9008,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:f4f62f68fa67bee8ea74f587e05b9008,condition,3
+md5:f4f62f68fa67bee8ea74f587e05b9008,counterbalance,0
+md5:f4f62f68fa67bee8ea74f587e05b9008,status,3
+md5:415fa7d72dbb7fa43017f5d33c97f4dc,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:415fa7d72dbb7fa43017f5d33c97f4dc,condition,5
+md5:415fa7d72dbb7fa43017f5d33c97f4dc,counterbalance,0
+md5:415fa7d72dbb7fa43017f5d33c97f4dc,status,3
+md5:5828f7f9b16466945505e1bcb2b1b1c3,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:5828f7f9b16466945505e1bcb2b1b1c3,condition,1
+md5:5828f7f9b16466945505e1bcb2b1b1c3,counterbalance,0
+md5:5828f7f9b16466945505e1bcb2b1b1c3,status,3
+md5:1357cbdaa29be72dde9fb5ba019abb27,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.134 Safari/537.36 Edg/103.0.1264.71"
+md5:1357cbdaa29be72dde9fb5ba019abb27,error2,"[""[\""Failed to execute 'exitFullscreen' on 'Document': Document not active\"",\""TypeError: Failed to execute 'exitFullscreen' on 'Document': Document not active\\n    at t.trial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:6:102650)\\n    at m (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:135473)\\n    at f (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:134511)\\n    at i.finishTrial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:139652)\\n    at n (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:12:51309)\\n    at https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:12:51705\""]""]"
+md5:1357cbdaa29be72dde9fb5ba019abb27,condition,2
+md5:1357cbdaa29be72dde9fb5ba019abb27,counterbalance,0
+md5:1357cbdaa29be72dde9fb5ba019abb27,status,3
+md5:76ddc60a3e02d42ca7a9e80ffdf8bf22,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:76ddc60a3e02d42ca7a9e80ffdf8bf22,condition,4
+md5:76ddc60a3e02d42ca7a9e80ffdf8bf22,counterbalance,0
+md5:76ddc60a3e02d42ca7a9e80ffdf8bf22,status,1
+md5:d6664b56c361d904c1942a777a336a43,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:d6664b56c361d904c1942a777a336a43,condition,6
+md5:d6664b56c361d904c1942a777a336a43,counterbalance,0
+md5:d6664b56c361d904c1942a777a336a43,status,3
+md5:b1cb4c8f258fbd342f118966b76ab631,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.134 Safari/537.36 Edg/103.0.1264.71"
+md5:b1cb4c8f258fbd342f118966b76ab631,condition,0
+md5:b1cb4c8f258fbd342f118966b76ab631,counterbalance,0
+md5:b1cb4c8f258fbd342f118966b76ab631,status,1
+md5:bb13fb4bcb2991be0c5808294c318b7f,browser,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:bb13fb4bcb2991be0c5808294c318b7f,error2,"[""[\""Failed to execute 'exitFullscreen' on 'Document': Document not active\"",\""TypeError: Failed to execute 'exitFullscreen' on 'Document': Document not active\\n    at t.trial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:6:102650)\\n    at m (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:135473)\\n    at f (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:134511)\\n    at i.finishTrial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:139652)\\n    at n (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:12:51309)\\n    at https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:12:51705\""]""]"
+md5:bb13fb4bcb2991be0c5808294c318b7f,condition,2
+md5:bb13fb4bcb2991be0c5808294c318b7f,counterbalance,0
+md5:bb13fb4bcb2991be0c5808294c318b7f,status,3
+md5:2a5b623bf18937f819dd2acc0ecec012,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:2a5b623bf18937f819dd2acc0ecec012,condition,7
+md5:2a5b623bf18937f819dd2acc0ecec012,counterbalance,0
+md5:2a5b623bf18937f819dd2acc0ecec012,status,3
+md5:ca226065895d6ce3b0d4f216508f927c,browser,Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:102.0) Gecko/20100101 Firefox/102.0
+md5:ca226065895d6ce3b0d4f216508f927c,condition,6
+md5:ca226065895d6ce3b0d4f216508f927c,counterbalance,0
+md5:ca226065895d6ce3b0d4f216508f927c,status,3
+md5:725b0e78301dc375e4da00e6703e57af,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:725b0e78301dc375e4da00e6703e57af,error2,"[""[\""Failed to execute 'exitFullscreen' on 'Document': Document not active\"",\""TypeError: Failed to execute 'exitFullscreen' on 'Document': Document not active\\n    at t.trial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:6:102650)\\n    at m (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:135473)\\n    at f (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:134511)\\n    at i.finishTrial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:139652)\\n    at n (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:12:51309)\\n    at https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:12:51705\""]""]"
+md5:725b0e78301dc375e4da00e6703e57af,condition,6
+md5:725b0e78301dc375e4da00e6703e57af,counterbalance,0
+md5:725b0e78301dc375e4da00e6703e57af,status,3
+md5:f9ec335b1f42fcf8a32ebbde6a52deee,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:f9ec335b1f42fcf8a32ebbde6a52deee,condition,2
+md5:f9ec335b1f42fcf8a32ebbde6a52deee,counterbalance,0
+md5:f9ec335b1f42fcf8a32ebbde6a52deee,status,3
+md5:b5892b3dc268c621e7f6e144dfbd25ed,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:b5892b3dc268c621e7f6e144dfbd25ed,condition,5
+md5:b5892b3dc268c621e7f6e144dfbd25ed,counterbalance,0
+md5:b5892b3dc268c621e7f6e144dfbd25ed,status,3
+md5:203c4d97954341d3227f785e1f52be9f,browser,"Mozilla/5.0 (Linux; Android 10; SM-G960U) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Mobile Safari/537.36"
+md5:203c4d97954341d3227f785e1f52be9f,condition,9
+md5:203c4d97954341d3227f785e1f52be9f,counterbalance,0
+md5:203c4d97954341d3227f785e1f52be9f,status,1
+md5:9a2fe41a78d2b3e1fe05ab9737ab396e,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:9a2fe41a78d2b3e1fe05ab9737ab396e,error2,"[""[\""Failed to execute 'exitFullscreen' on 'Document': Document not active\"",\""TypeError: Failed to execute 'exitFullscreen' on 'Document': Document not active\\n    at t.trial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:6:102650)\\n    at m (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:135473)\\n    at f (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:134511)\\n    at i.finishTrial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:139652)\\n    at n (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:12:51309)\\n    at https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:12:51705\""]""]"
+md5:9a2fe41a78d2b3e1fe05ab9737ab396e,condition,0
+md5:9a2fe41a78d2b3e1fe05ab9737ab396e,counterbalance,0
+md5:9a2fe41a78d2b3e1fe05ab9737ab396e,status,3
+md5:763a4b7df3173c7755dfd160ded3fe07,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.101 Safari/537.36"
+md5:763a4b7df3173c7755dfd160ded3fe07,condition,3
+md5:763a4b7df3173c7755dfd160ded3fe07,counterbalance,0
+md5:763a4b7df3173c7755dfd160ded3fe07,status,3
+md5:30fc36d4a29e8e118ba11c441c09aadb,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:30fc36d4a29e8e118ba11c441c09aadb,condition,7
+md5:30fc36d4a29e8e118ba11c441c09aadb,counterbalance,0
+md5:30fc36d4a29e8e118ba11c441c09aadb,status,3
+md5:4f916d49c6e68172e7c75d6cb6a23ae9,browser,"Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:4f916d49c6e68172e7c75d6cb6a23ae9,condition,5
+md5:4f916d49c6e68172e7c75d6cb6a23ae9,counterbalance,0
+md5:4f916d49c6e68172e7c75d6cb6a23ae9,status,3
+md5:0ccd1d157534daf0b1de8ceae4315c1c,browser,"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:0ccd1d157534daf0b1de8ceae4315c1c,condition,5
+md5:0ccd1d157534daf0b1de8ceae4315c1c,counterbalance,0
+md5:0ccd1d157534daf0b1de8ceae4315c1c,status,3
+md5:73487a294986367dbf3608cd2f218a72,browser,Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:103.0) Gecko/20100101 Firefox/103.0
+md5:73487a294986367dbf3608cd2f218a72,error2,"[""[\""timeout\"",\""N/</n<@https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:6:36588\\n\""]"",""[\""timeout\"",\""N/</n<@https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:6:36588\\n\""]"",""[\""Error saving data. status: 0, statusText: error\"",\""error@https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:6:36732\\nN/e.error@https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:128929\\nd@https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:25971\\nfireWith@https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:26773\\nB@https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:79280\\nr@https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:82680\\n\""]""]"
+md5:73487a294986367dbf3608cd2f218a72,condition,7
+md5:73487a294986367dbf3608cd2f218a72,counterbalance,0
+md5:73487a294986367dbf3608cd2f218a72,status,3
+md5:e0312d006237e893ea1a2e7cddc053c8,browser,"Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.134 Safari/537.36"
+md5:e0312d006237e893ea1a2e7cddc053c8,error2,"[""[\""Failed to execute 'exitFullscreen' on 'Document': Document not active\"",\""TypeError: Failed to execute 'exitFullscreen' on 'Document': Document not active\\n    at t.trial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:6:102650)\\n    at m (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:135473)\\n    at f (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:134511)\\n    at i.finishTrial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:139652)\\n    at n (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:12:51309)\\n    at https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:12:51705\""]""]"
+md5:e0312d006237e893ea1a2e7cddc053c8,condition,1
+md5:e0312d006237e893ea1a2e7cddc053c8,counterbalance,0
+md5:e0312d006237e893ea1a2e7cddc053c8,status,3
+md5:1aad101a61591bc7890f4e8af9b92d88,browser,Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:102.0) Gecko/20100101 Firefox/102.0
+md5:1aad101a61591bc7890f4e8af9b92d88,condition,9
+md5:1aad101a61591bc7890f4e8af9b92d88,counterbalance,0
+md5:1aad101a61591bc7890f4e8af9b92d88,status,3
+md5:e3ffc950c66dbc2286808e101a789378,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:e3ffc950c66dbc2286808e101a789378,condition,9
+md5:e3ffc950c66dbc2286808e101a789378,counterbalance,0
+md5:e3ffc950c66dbc2286808e101a789378,status,3
+md5:29e6355832c7bb86b1b58b194ff82ac3,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:29e6355832c7bb86b1b58b194ff82ac3,condition,1
+md5:29e6355832c7bb86b1b58b194ff82ac3,counterbalance,0
+md5:29e6355832c7bb86b1b58b194ff82ac3,status,3
+md5:ddb15553525808e916815da8ce4f8823,browser,Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:102.0) Gecko/20100101 Firefox/102.0
+md5:ddb15553525808e916815da8ce4f8823,error2,"[""[\""Not in fullscreen mode\"",\""jsPsych.plugins.fullscreen</t.trial@https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:6:102631\\nm@https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:135473\\nf@https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:134512\\nwindow.jsPsych</i.finishTrial@https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:139652\\nn@https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:12:51309\\nonComplete/<@https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:12:51705\\n\""]""]"
+md5:ddb15553525808e916815da8ce4f8823,condition,9
+md5:ddb15553525808e916815da8ce4f8823,counterbalance,0
+md5:ddb15553525808e916815da8ce4f8823,status,3
+md5:9efb32ca924276a79dad40b1291cea21,browser,Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:103.0) Gecko/20100101 Firefox/103.0
+md5:9efb32ca924276a79dad40b1291cea21,condition,4
+md5:9efb32ca924276a79dad40b1291cea21,counterbalance,0
+md5:9efb32ca924276a79dad40b1291cea21,status,3
+md5:c230caba8e67114f43963939d6990190,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:c230caba8e67114f43963939d6990190,condition,1
+md5:c230caba8e67114f43963939d6990190,counterbalance,0
+md5:c230caba8e67114f43963939d6990190,status,3
+md5:df0a85c3a0e4e3a122f41431745e92b4,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.134 Safari/537.36"
+md5:df0a85c3a0e4e3a122f41431745e92b4,condition,4
+md5:df0a85c3a0e4e3a122f41431745e92b4,counterbalance,0
+md5:df0a85c3a0e4e3a122f41431745e92b4,status,3
+md5:b8d1cb03b5214a4eab981fce9eb3a72c,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:b8d1cb03b5214a4eab981fce9eb3a72c,condition,7
+md5:b8d1cb03b5214a4eab981fce9eb3a72c,counterbalance,0
+md5:b8d1cb03b5214a4eab981fce9eb3a72c,status,1
+md5:62de1ad3e8e336fabbf5e36f00762c1c,browser,Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:103.0) Gecko/20100101 Firefox/103.0
+md5:62de1ad3e8e336fabbf5e36f00762c1c,condition,8
+md5:62de1ad3e8e336fabbf5e36f00762c1c,counterbalance,0
+md5:62de1ad3e8e336fabbf5e36f00762c1c,status,3
+md5:d085d50b6d49ef188515a4e30e49e709,browser,"Mozilla/5.0 (X11; CrOS aarch64 14816.131.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:d085d50b6d49ef188515a4e30e49e709,condition,1
+md5:d085d50b6d49ef188515a4e30e49e709,counterbalance,0
+md5:d085d50b6d49ef188515a4e30e49e709,status,3
+md5:2f361e9ddc10452f4bb4ffea2b11f0c6,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:2f361e9ddc10452f4bb4ffea2b11f0c6,condition,2
+md5:2f361e9ddc10452f4bb4ffea2b11f0c6,counterbalance,0
+md5:2f361e9ddc10452f4bb4ffea2b11f0c6,status,3
+md5:60f49514fc9d5fa5a15a2bba5f58747d,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:60f49514fc9d5fa5a15a2bba5f58747d,condition,1
+md5:60f49514fc9d5fa5a15a2bba5f58747d,counterbalance,0
+md5:60f49514fc9d5fa5a15a2bba5f58747d,status,3
+md5:5ad0aa296ffdb5967174a30bcb6ef9dd,browser,Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:103.0) Gecko/20100101 Firefox/103.0
+md5:5ad0aa296ffdb5967174a30bcb6ef9dd,condition,3
+md5:5ad0aa296ffdb5967174a30bcb6ef9dd,counterbalance,0
+md5:5ad0aa296ffdb5967174a30bcb6ef9dd,status,1
+md5:0118e69e48f343746343b5540fbb04ba,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:0118e69e48f343746343b5540fbb04ba,condition,0
+md5:0118e69e48f343746343b5540fbb04ba,counterbalance,0
+md5:0118e69e48f343746343b5540fbb04ba,status,3
+md5:e0fc735540ed178718723a468d12db37,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:e0fc735540ed178718723a468d12db37,condition,1
+md5:e0fc735540ed178718723a468d12db37,counterbalance,0
+md5:e0fc735540ed178718723a468d12db37,status,1
+md5:c89bf5c1c15723197b088bf9fbcac824,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:c89bf5c1c15723197b088bf9fbcac824,error2,"[""[\""Failed to execute 'exitFullscreen' on 'Document': Document not active\"",\""TypeError: Failed to execute 'exitFullscreen' on 'Document': Document not active\\n    at t.trial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:6:102650)\\n    at m (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:135473)\\n    at f (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:134511)\\n    at i.finishTrial (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:139652)\\n    at n (https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:12:51309)\\n    at https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:12:51705\""]""]"
+md5:c89bf5c1c15723197b088bf9fbcac824,condition,2
+md5:c89bf5c1c15723197b088bf9fbcac824,counterbalance,0
+md5:c89bf5c1c15723197b088bf9fbcac824,status,3
+md5:1926fcd031bb7bc59ce1ed5b09b4f56e,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:1926fcd031bb7bc59ce1ed5b09b4f56e,condition,8
+md5:1926fcd031bb7bc59ce1ed5b09b4f56e,counterbalance,0
+md5:1926fcd031bb7bc59ce1ed5b09b4f56e,status,3
+md5:6c31a287e67b044a6d099d3d8823ba4a,browser,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36"
+md5:6c31a287e67b044a6d099d3d8823ba4a,condition,7
+md5:6c31a287e67b044a6d099d3d8823ba4a,counterbalance,0
+md5:6c31a287e67b044a6d099d3d8823ba4a,status,3
+md5:9f7cf57d571ddeb33e5a023f472410fe,browser,Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:102.0) Gecko/20100101 Firefox/102.0
+md5:9f7cf57d571ddeb33e5a023f472410fe,error2,"[""[\""Not in fullscreen mode\"",\""jsPsych.plugins.fullscreen</t.trial@https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:6:102631\\nm@https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:135473\\nf@https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:134512\\nwindow.jsPsych</i.finishTrial@https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:5:139652\\nn@https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:12:51309\\nonComplete/<@https://cocosci-lightbot.global.ssl.fastly.net/dist/exp.template.a1474eff.js:12:51705\\n\""]""]"
+md5:9f7cf57d571ddeb33e5a023f472410fe,condition,0
+md5:9f7cf57d571ddeb33e5a023f472410fe,counterbalance,0
+md5:9f7cf57d571ddeb33e5a023f472410fe,status,3
+md5:5200cb3e9bbc816f2c5114b834f0c399,browser,"Mozilla/5.0 (X11; CrOS x86_64 14588.123.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.0.0 Safari/537.36"
+md5:5200cb3e9bbc816f2c5114b834f0c399,condition,5
+md5:5200cb3e9bbc816f2c5114b834f0c399,counterbalance,0
+md5:5200cb3e9bbc816f2c5114b834f0c399,status,3
