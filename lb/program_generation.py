@@ -7,7 +7,7 @@ import warnings
 
 
 def with_new_sr_deprecated(p, sr):
-    warnings.warn('This new SR function is deprecated')
+    warnings.warn('This old/simpler SR function is deprecated')
     if len(sr) == 1:
         return p
 

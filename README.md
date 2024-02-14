@@ -12,6 +12,7 @@ Analysis code for "Exploring the hierarchical structure of human plans via progr
 
 Here's a partial file listing, noting the files that contain the most important elements of the model.
 
+- `experiment/data/human_raw/0.4/*.csv` has data from the experiment.
 - `lb/search.py` has A* search.
 - `lb/heuristics.py` has the heuristic based on an approach for the traveling salesman problem.
 - `lb/program_generation.py` the greedy algorithm for generating programs.
