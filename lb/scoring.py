@@ -132,7 +132,7 @@ import os
 assert os.getenv('NUMBA_DISABLE_JIT') != '1'
 
 @numba.njit
-def batch_pyp_process_prior(program_count_matrix, a, b, p_normal, p_end, p_subprocess_end):
+def batch_pyp_process_prior(program_count_matrix, a, b, p_normal, p_end, p_subprocess_end, precompute_gamma=True):
     '''
     This function is intended to be an efficient batch implementation used for model fitting.
 
@@ -145,7 +145,20 @@ def batch_pyp_process_prior(program_count_matrix, a, b, p_normal, p_end, p_subpr
     def lgamma(n):
         return 0 if n == 0 else math.lgamma(n)
     def gen_gamma(integer, offset):
+        # This is a generalized log gamma that assumes a product starting from some offset.
         return lgamma(integer+offset) - lgamma(offset)
+
+    if precompute_gamma:
+        # NOTE: We precompute gamma values for these parameters
+        LIMIT = 100
+        _cached_gamma_offset_1_sub_a = [gen_gamma(i, 1-a) for i in range(LIMIT)]
+        def cached_gamma_offset_1_sub_a(i):
+            assert 0 <= i < LIMIT
+            return _cached_gamma_offset_1_sub_a[i]
+        _cached_gamma_offset_b = [gen_gamma(i, b) for i in range(LIMIT)]
+        def cached_gamma_offset_b(i):
+            assert 0 <= i < LIMIT
+            return _cached_gamma_offset_b[i]
 
     p_normal_inst = 1/len(main.NORMAL_INST)
     log_p_normal_inst = math.log(p_normal_inst)
@@ -184,8 +197,14 @@ def batch_pyp_process_prior(program_count_matrix, a, b, p_normal, p_end, p_subpr
 
             log_p += c * log_p_not_normal
             log_p += math.log(a * (k - 1) + b)
-            log_p += gen_gamma(c-1, 1-a)
-        log_p -= gen_gamma(n, b)
+            if precompute_gamma:
+                log_p += cached_gamma_offset_1_sub_a(c-1)
+            else:
+                log_p += gen_gamma(c-1, 1-a)
+        if precompute_gamma:
+            log_p -= cached_gamma_offset_b(n)
+        else:
+            log_p -= gen_gamma(n, b)
 
         log_p += (ct_mat[MAIN_LEN_INDEX] - 1) * log_p_not_end + log_p_end
         for idx in PROCESS_LEN_INDEX:

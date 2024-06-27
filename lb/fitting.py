@@ -362,7 +362,11 @@ class TraceSet(object):
         assert len(data_scores) == len(data_not_in_enum)
 
         unique_scores = np.concatenate([enum_scores, data_scores[data_not_in_enum]])
-        assert (len(self.program_set | data.program_set),) == unique_scores.shape, unique_scores.shape
+        count_in_both = (~data_not_in_enum).sum()
+        # Comparing intersection to the result of _data_not_in_enum. Faster than comparing a union to unique_scores.
+        assert (len(self.program_set & data.program_set),) == count_in_both, count_in_both
+        # Counting argument that we've accounted for all programs
+        assert len(unique_scores) + count_in_both == len(data_scores) + len(enum_scores)
 
         log_partition = logsumexp(unique_scores)
         normalized_sum = np.exp(unique_scores - log_partition).sum()
