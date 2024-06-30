@@ -130,6 +130,10 @@ def heuristic_cost_to_go_light_progress(mdp, state):
         -1 if unlit_light else 0)
     return h
 
+
+# ------------------------------------------------------------
+# MST/TSP heuristic
+
 MSTResult = collections.namedtuple('MSTResult', ['total_cost', 'C', 'E'])
 
 # @numba.njit
@@ -252,3 +256,109 @@ def make_heuristic_cost_navigation_to_mst(mdp):
 
     return heuristic_cost_navigation_to_mst
 
+# ------------------------------------------------------------
+# Optimal cost heuristic
+
+def reachable_states(mdp):
+    import collections
+    seen = set()
+    queue = collections.deque([mdp.initial_state()])
+    while queue:
+        s = queue.popleft()
+        if s in seen:
+            continue
+        yield s
+        seen.add(s)
+        for a in mdp.actions(s):
+            ns, r = mdp.next_state_and_reward(s, a)
+            if ns not in seen and ns not in queue:
+                queue.append(ns)
+
+def convert_lightbot_to_networkx(mdp):
+    import networkx as nx
+    reachable = list(reachable_states(mdp))
+
+    # Construct networkx graph for the MDP's reachable states
+    g = nx.DiGraph()
+    for s in reachable:
+        for a in mdp.actions(s):
+            ns, r = mdp.next_state_and_reward(s, a)
+            g.add_edge(s, ns)
+
+    # Gather goals, based on whether states are terminal
+    goals = [s for s in reachable if mdp.is_terminal(s)]
+
+    return g, goals
+
+def shortest_path_length_to_any_goal(g, goals, *, impl='hidden'):
+    '''
+    This function computes the shortest path length from each state to any of the goals.
+
+    A number of implementations are included, primarily for testing purposes.
+    '''
+    import networkx as nx
+    assert impl in ('hidden', 'augment', 'loop-min', 'diy')
+
+    # hidden/diy are fastest, from simple tests.
+    if impl == 'diy':
+        # This is a hand-rolled implementation
+        if g.is_directed():
+            g = g.reverse(copy=False)
+        seen = set()
+        curr = set(goals)
+        next_ = set()
+        level = 0
+        rv = {}
+        while curr:
+            seen |= curr
+            for n in curr:
+                rv[n] = level
+                next_ |= set(g.adj[n]) - seen
+            level += 1
+            curr, next_ = next_, set()
+        return rv
+    elif impl == 'hidden':
+        # This uses a hidden function in networkx that can be adapted to work for this.
+
+        if g.is_directed():
+            g = g.reverse(copy=False)
+        return dict(nx.unweighted._single_shortest_path_length(g.adj, goals, cutoff=float('inf')))
+    elif impl == 'augment':
+        # This was inspirect by a stack overflow comment, which makes all goals transition to a single, global goal.
+
+        final_goal = '__GOAL__'
+        # Make a copy of graph, augmenting with a new single goal that all goals lead to.
+        # By doing this, we get a single-target problem, which lets us use the public API of networkx.
+        g = g.copy()
+        for goal in goals:
+            g.add_edge(goal, final_goal)
+        rv = nx.shortest_path_length(g, target=final_goal)
+        del rv[final_goal]
+        return {
+            # Subtract 1 from the distance, since we've added this extraneous goal node.
+            state: dist-1
+            for state, dist in rv.items()
+        }
+    elif impl == 'loop-min':
+        # This is my original implementation, which finds shortest paths to each goal,
+        # returning the shortest path length to any of them.
+
+        # Gather shortest paths to each goal
+        shortest_path_lengths = []
+        for goal in goals:
+            # For a goal, we compute its distance from all other states.
+            shortest_path_lengths.append(nx.shortest_path_length(g, target=goal))
+
+        return {
+            # Select distance to the closest goal.
+            state: min(spl[state] for spl in shortest_path_lengths)
+            for state in g.nodes
+        }
+
+def make_shortest_path_heuristic(mdp):
+    g, goals = convert_lightbot_to_networkx(mdp)
+    spl = shortest_path_length_to_any_goal(g, goals)
+    def heuristic_cost(mdp_inner, state, _cost_so_far):
+        assert mdp is mdp_inner
+        return spl[state]
+    return heuristic_cost

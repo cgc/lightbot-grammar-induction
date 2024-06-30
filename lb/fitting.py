@@ -307,9 +307,9 @@ class TraceSet(object):
 
     @classmethod
     def from_astar(cls, base_mdp, *, topk=None, f_upper_bound=None, include_equal_score=None, joblib_worker=None):
-        h_ = heuristics.make_heuristic_cost_navigation_to_mst(base_mdp)
-        h = lambda mdp, s, _: h_(mdp.mdp, s.state, light_target=s.light_target)
-        mdp = envs.LightbotTrace(base_mdp)
+        h_ = heuristics.make_shortest_path_heuristic(base_mdp)
+        h = lambda mdp, s, _: h_(mdp.mdp, s.state, _)
+        mdp = envs.SimpleLightbotTrace(base_mdp)
 
         kw = {}
         if topk is not None: kw['topk'] = topk

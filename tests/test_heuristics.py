@@ -139,3 +139,97 @@ def test_make_heuristic_cost_navigation_to_mst():
     assert h(base_mdp, s) == 1 + 6 + 3
     s = base_mdp.next_state(s, 'A')
     assert h(base_mdp, s) == 6 + 3
+
+def test_reachable_states():
+    mdp = lb.LightbotMap(
+        np.array([
+            [0, 0, 0],
+            [0, 1, 2],
+            [0, 0, 0],
+        ]),
+        np.array([
+            [-1, -1, -1],
+            [-1, 0, -1],
+            [-1, -1, -1],
+        ]),
+        (0, 0),
+        0,
+    )
+    reachable = set(lb.heuristics.reachable_states(mdp))
+    enumerated_states = {
+        lb.State(
+            (x, y),
+            dir,
+            ('{:0' + str(mdp.total_lights) + 'b}').format(map_lit))
+        for x in range(mdp.map_h.shape[0])
+        for y in range(mdp.map_h.shape[1])
+        for dir in range(4)
+        for map_lit in range(2**mdp.total_lights)
+    }
+    # Since you can only reach the height=2 block by passing the light, certain
+    # states are not reachable.
+    assert enumerated_states - reachable == {
+        # Can only jump up to light from 3 directions, then you have to activate the light.
+        # So, you can't be on an unlit light from 1 direction.
+        lb.State((1, 1), 0, '0'),
+        # Can only reach height=2 block from light, so it will never be unlit.
+        *{
+            lb.State((1, 2), dir, '0')
+            for dir in range(4)
+        },
+    }
+
+def test_shortest_path_length_to_any_goal_simple():
+    import networkx as nx
+    g = nx.Graph()
+    for i in range(9):
+        g.add_edge(i, i+1)
+    assert len(g) == 10
+    for impl in ['hidden', 'augment', 'loop-min', 'diy']:
+        rv = lb.heuristics.shortest_path_length_to_any_goal(g, [0, 9], impl=impl)
+        assert rv == {
+            0: 0,
+            1: 1,
+            2: 2,
+            3: 3,
+            4: 4,
+            5: 4,
+            6: 3,
+            7: 2,
+            8: 1,
+            9: 0,
+        }
+
+def test_shortest_path_length_to_any_goal_lightbot():
+
+    mdp = lb.exp.mdp_from_name(('maps', 8))
+    # Copy it, so we can change initial state
+    mdp = lb.envs.LightbotMap(mdp.map_h, mdp.map_light, mdp.position0, mdp.direction0)
+    mdp.noop_reward = float('-inf')
+
+    reachable = list(lb.heuristics.reachable_states(mdp))
+
+    # Make heuristic
+    h_ = lb.heuristics.make_heuristic_cost_navigation_to_mst(mdp)
+    wrapped_mdp = lb.envs.LightbotTrace(mdp)
+    h = lambda wrapped_mdp, s, _: h_(wrapped_mdp.mdp, s.state, light_target=s.light_target)
+
+    astar_search_path_lengths = {}
+    # Get path lengths by running A* search from all starting states
+    for s in reachable:
+        if s.map_lit != '0'*mdp.total_lights:
+            continue
+        mdp.position0 = s.position
+        mdp.direction0 = s.direction
+        res = lb.search.astar(wrapped_mdp, h, topk=1, include_equal_score=False)
+        astar_search_path_lengths[mdp.initial_state()] = res.result.score
+
+    converted = lb.heuristics.convert_lightbot_to_networkx(mdp)
+    first_spl = lb.heuristics.shortest_path_length_to_any_goal(*converted)
+    for impl in ['hidden', 'augment', 'loop-min', 'diy']:
+        spl = lb.heuristics.shortest_path_length_to_any_goal(*converted, impl=impl)
+        # Check against A* search
+        for key, pl in astar_search_path_lengths.items():
+            assert pl == spl[key]
+        # Check that all implementations match
+        assert spl == first_spl

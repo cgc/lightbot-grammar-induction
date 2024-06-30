@@ -171,24 +171,6 @@ def test_gen_programs():
     assert mkprog('3112', 'A2', 'B3', 'CD') in ps
 
 
-def test_trace():
-    base_mdp = lb.EnvLoader.maps[0]
-    mdp = lb.LightbotTrace(base_mdp)
-    s = mdp.initial_state()
-    assert s.light_target is None
-    s = mdp.next_state(s, (3, 2))
-    assert s.light_target == (3, 2)
-    s = mdp.next_state(s, 'C')
-    assert s.light_target == (3, 2)
-    s = mdp.next_state(s, 'C')
-    assert s.light_target == (3, 2)
-    s = mdp.next_state(s, 'C')
-    assert s.light_target == (3, 2)
-    s = mdp.next_state(s, 'A')
-    assert s.light_target is None
-    assert mdp.is_terminal(s)
-    assert s.trace == 'CCCA'
-
 def test_all_substring_counts():
     len2 = {'AB': 2, 'BA': 2, 'ABA': 2, 'BAB': 1, 'ABAB': 1, 'BABA': 1}
     assert lb.all_substring_counts('ABABA', min_length=2, avoid_overlapping=False) == len2
