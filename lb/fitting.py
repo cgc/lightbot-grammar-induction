@@ -1,3 +1,4 @@
+import dataclasses
 from dataclasses import dataclass
 from typing import Any, List
 from . import program_analysis
@@ -331,68 +332,6 @@ class TraceSet(object):
         lens = [len(t) for t in self.traces]
         return f'TraceSet #{len(self.traces)} #programs={len(self.programs)} trace range {min(lens)}-{max(lens)} iters={self.astar_results.iteration_count} non-monotonic={self.astar_results.non_monotonic_counter}'
 
-    @functools.lru_cache
-    def _data_not_in_enum(self, data_programs):
-        data_not_in_enum = np.array([
-            program not in self.program_set
-            for program in data_programs
-        ], dtype=bool)
-        return data_not_in_enum
-
-    def compute_scores_and_partition(self, data: 'BehaviorSummary', a: Args, *, batch_score=None):
-        orig_batch_score = batch_score
-        def batch_score(programs, a, program_count_matrix, **kw):
-            return orig_batch_score(program_count_matrix, a.to_numba())
-
-        enum_scores = batch_score(
-            self.programs,
-            a,
-            base_mdp=self.mdp,
-            program_count_matrix=self.program_count_matrix,
-        )
-
-        data_scores = batch_score(
-            data.programs,
-            a,
-            base_mdp=self.mdp,
-            program_count_matrix=data.program_count_matrix,
-        )
-
-        data_not_in_enum = self._data_not_in_enum(data.programs)
-        assert len(data_scores) == len(data_not_in_enum)
-
-        unique_scores = np.concatenate([enum_scores, data_scores[data_not_in_enum]])
-        count_in_both = (~data_not_in_enum).sum()
-        # Comparing intersection to the result of _data_not_in_enum. Faster than comparing a union to unique_scores.
-        assert (len(self.program_set & data.program_set),) == count_in_both, count_in_both
-        # Counting argument that we've accounted for all programs
-        assert len(unique_scores) + count_in_both == len(data_scores) + len(enum_scores)
-
-        log_partition = logsumexp(unique_scores)
-        normalized_sum = np.exp(unique_scores - log_partition).sum()
-        assert np.isclose(1, normalized_sum), f'sanity check for no numerical issues, but normalized sum was {normalized_sum}'
-
-        return dict(
-            enum_scores=enum_scores,
-            data_scores=data_scores,
-            log_partition=log_partition,
-        )
-
-
-    def crossent(self, data: 'BehaviorSummary', a: Args, *, batch_score=None, return_normalized_scores=False):
-        s = self.compute_scores_and_partition(data, a, batch_score=batch_score)
-        normalized_scores = s['data_scores'] - s['log_partition']
-        if return_normalized_scores:
-            return normalized_scores
-        crossent = 0
-        for pi, p in enumerate(data.programs):
-            ct = data.program_counts[p]
-            crossent += -ct * normalized_scores[pi]
-
-        assert not np.isinf(crossent)
-        assert not np.isnan(crossent)
-        return crossent
-
     def discrepancy_report(self, data: 'BehaviorSummary', *, show=False, brief=False):
         def _log(prefix, full_cts, full, *, print_missing=False):
             for name, cts in [
@@ -469,7 +408,8 @@ class TraceSet(object):
         import pandas as pd
         from IPython.display import display, HTML
 
-        r = self.compute_scores_and_partition(data, a, batch_score=batch_score)
+        row = DatasetRow(None, None, data, self, None)
+        r = row.compute_scores_and_partition(a, batch_score=batch_score)
         data_scores = r['data_scores']
         enum_scores = r['enum_scores']
         logZ = r['log_partition']
@@ -792,6 +732,82 @@ class DatasetRow:
     ts: TraceSet
     elapsed: dict[str, float]
 
+    _data_not_in_enum: np.array = None
+
+
+    @property
+    def data_not_in_enum(self):
+        if self._data_not_in_enum is None:
+            self._data_not_in_enum = np.array([
+                program not in self.ts.program_set
+                for program in self.bs.programs
+            ], dtype=bool)
+
+            count_in_both = (~self._data_not_in_enum).sum()
+            # Comparing intersection to the result of _data_not_in_enum.
+            assert (len(self.ts.program_set & self.bs.program_set),) == count_in_both, count_in_both
+        return self._data_not_in_enum
+
+
+    def compute_scores_and_partition(self, a: Args, *, batch_score=None, return_distribution=False):
+        enum_scores = batch_score(
+            self.ts.program_count_matrix,
+            a.to_numba(),
+        )
+
+        data_scores = batch_score(
+            self.bs.program_count_matrix,
+            a.to_numba(),
+        )
+
+        assert len(data_scores) == len(self.data_not_in_enum)
+        unique_scores = np.concatenate([enum_scores, data_scores[self.data_not_in_enum]])
+        # Counting argument that we've accounted for all programs
+        count_in_both = (~self.data_not_in_enum).sum()
+        assert len(unique_scores) + count_in_both == len(data_scores) + len(enum_scores)
+
+        log_partition = logsumexp(unique_scores)
+        distribution = np.exp(unique_scores - log_partition)
+        normalized_sum = distribution.sum()
+        assert np.isclose(1, normalized_sum), f'sanity check for no numerical issues, but normalized sum was {normalized_sum}'
+
+        return dict(
+            distribution=distribution if return_distribution else None,
+            enum_scores=enum_scores,
+            data_scores=data_scores,
+            log_partition=log_partition,
+        )
+
+
+    def crossent(self, a: Args, *, batch_score=None, return_normalized_scores=False):
+        s = self.compute_scores_and_partition(a, batch_score=batch_score)
+        normalized_scores = s['data_scores'] - s['log_partition']
+        if return_normalized_scores:
+            return normalized_scores
+        crossent = 0
+        for pi, p in enumerate(self.bs.programs):
+            ct = self.bs.program_counts[p]
+            crossent += -ct * normalized_scores[pi]
+
+        assert not np.isinf(crossent)
+        assert not np.isnan(crossent)
+        return crossent
+
+    @dataclass
+    class DummyTraceSet:
+        program_count_matrix: np.array
+
+    def low_memory_copy(self):
+        '''
+        This is a bit of a hack, meant to facilitate parallel fitting of data. We avoid sending the full TraceSet to worker processes,
+        since model fitting can work by using only the program_count_matrix.
+        '''
+        assert isinstance(self.ts, TraceSet), 'Can only copy from original.'
+        # Ensure this property is computed before copying.
+        self.data_not_in_enum
+        assert self._data_not_in_enum is not None
+        return dataclasses.replace(self, ts=DatasetRow.DummyTraceSet(self.ts.program_count_matrix))
+
 
 class CachedFile:
     def __init__(self, name):
@@ -988,8 +1004,9 @@ class Dataset:
             print(f'{name} {program_ct=} {missing_program_ct=} missing={100*missing_program_ct/program_ct:.2f}%')
 
     def crossent(self, args, *, batch_score=None):
+        # HACK: this is a convenience function that is redefined below for fit
         return sum([
-            res.ts.crossent(res.bs, args, batch_score=batch_score)
+            res.crossent(args, batch_score=batch_score)
             for res in self.d
         ])
 
@@ -1000,9 +1017,16 @@ class Dataset:
             for prog, ct in res.bs.program_counts.items()
         ])
 
-    def fit(self, batch_score, *, debug=False, free_parameters=None, default_values={}, extra_dof=0, nuisance_params=None):
+    def fit(self, batch_score, *, debug=False, free_parameters=None, default_values={}, extra_dof=0, nuisance_params=None, **kw):
+        lmcs = [
+            res.low_memory_copy()
+            for res in self.d
+        ]
         def original_loss_fn(a):
-            return self.crossent(a, batch_score=batch_score)
+            return sum([
+                res.crossent(a, batch_score=batch_score)
+                for res in lmcs
+            ])
 
         if nuisance_params is None:
             loss_fn = original_loss_fn

@@ -21,18 +21,22 @@ def test_compute_scores_and_partition_and_crossent():
     })
 
     # Testing compute_scores_and_partition()
-    r = ts.compute_scores_and_partition(bs, a, batch_score=lb.scoring.batch_score_mdl)
+    row = lb.fitting.DatasetRow(None, None, bs, ts, None)
+    r = row.compute_scores_and_partition(a, batch_score=lb.scoring.batch_score_mdl)
     assert np.allclose(r['data_scores'], [-1, -2, -3])
     assert np.allclose(r['enum_scores'], [-2, -3, -4])
     expected = np.log(np.exp([-1, -2, -3, -4]).sum())
     assert np.isclose(r['log_partition'], expected), 'log partition should be computed based on unique programs across both bs and ts'
+    assert (row._data_not_in_enum == np.array([True, False, False])).all()
 
     # Testing crossent()
     expected = -sum(
         (-lb.hier_len(prog) - r['log_partition']) * ct
         for prog, ct in bs.program_counts.items()
     )
-    assert np.isclose(ts.crossent(bs, a, batch_score=lb.scoring.batch_score_mdl), expected)
+    assert np.isclose(row.crossent(a, batch_score=lb.scoring.batch_score_mdl), expected)
+    # A low-memory copy of the row can compute this too.
+    assert np.isclose(row.low_memory_copy().crossent(a, batch_score=lb.scoring.batch_score_mdl), expected)
 
     # Testing how fit() handles nuisance parameters
     dc = lb.Dataset([lb.fitting.DatasetRow(None, None, bs, ts, {})], {}, {})
