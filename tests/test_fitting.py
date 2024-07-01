@@ -122,7 +122,10 @@ def test_logmeanexp():
     # At a sufficiently high scale, the largest contribution comes from the largest element
     assert np.isclose(lb.fitting.logmeanexp(values), scale * np.log(.9))
     # But at this high a scale, an implementation without a log-sum-exp trick will underflow
-    assert overunderflowing_lme(values) == -np.inf
+    with warnings.catch_warnings(record=True) as ws:
+        assert overunderflowing_lme(values) == -np.inf
+    assert len(ws) == 1
+    assert 'divide by zero encountered in log' in str(ws[0])
 
     # Correctly avoids overflow for very large values (from the exp)
     scale = 1e5
