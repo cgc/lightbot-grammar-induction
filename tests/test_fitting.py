@@ -52,6 +52,13 @@ def test_compute_scores_and_partition_and_crossent():
     expected_log_prob = np.log(np.mean(np.exp(log_probs_for_mdl_betas)))
     assert np.isclose(res.result['result'].fun, -expected_log_prob)
 
+    # Computing without logs as validation -- this math matches the text most closely.
+    expected_log_prob2 = np.log(np.mean([
+        np.prod(softmax(w * scores) ** counts)
+        for w in mdl_beta_values
+    ]))
+    assert np.isclose(expected_log_prob, expected_log_prob2)
+
     # This is a more in-depth test of various incorrect ways of computing the above, showing some inequalities between them.
     args = [lb.fitting.Args.new({}), dict(mdl_beta=mdl_beta_values)]
     geometric_mean = lb.fitting.integrate_nuisance(lambda a: -dc.crossent(a, batch_score=lb.scoring.batch_score_mdl), *args)

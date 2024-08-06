@@ -219,6 +219,19 @@ def is_recursive(program, curr=None, stack=None):
 def hier_len(p):
     return len(p.main) + sum(len(sr) for sr in p.subroutines)
 
+def instruction_use_count(p):
+    cts = {i: 0 for i in INSTRUCTIONS}
+    def _ct(sr):
+        for inst in sr:
+            cts[inst] += 1
+    _ct(p.main)
+    for sr in p.subroutines:
+        _ct(sr)
+    return cts
+
+def sr_use_count(p):
+    ct = instruction_use_count(p)
+    return sum(ct[k] for k in PROCESS_INST)
 
 State = collections.namedtuple('State', [
     'position',

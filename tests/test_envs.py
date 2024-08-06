@@ -129,6 +129,16 @@ def test_is_recursive():
     assert lb.is_recursive(lb.Program(main='1', subroutines=('A2', 'B1')))
     assert not lb.is_recursive(lb.Program(main='11', subroutines=('22', '33', '44', 'A')))
 
+def test_instruction_use_count():
+    assert (
+        lb.envs.instruction_use_count(lb.tools.mkprog('1AB2', 'C', 'B1', 'E')) ==
+        {'A': 1, 'B': 2, 'C': 1, 'D': 0, 'E': 1, '1': 2, '2': 1, '3': 0, '4': 0})
+
+def test_sr_use_count():
+    assert lb.envs.sr_use_count(lb.tools.mkprog('A')) == 0
+    assert lb.envs.sr_use_count(lb.tools.mkprog('A', 'B', 'C', 'D', 'E')) == 0
+    assert lb.envs.sr_use_count(lb.tools.mkprog('111A', '2')) == 4
+
 def test_trace():
     base_mdp = lb.EnvLoader.maps[0]
 

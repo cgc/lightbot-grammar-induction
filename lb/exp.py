@@ -283,6 +283,12 @@ class Participant(object):
             for row in self.filtered_rows(lambda d: d['trial_type'] == 'LightbotTask' and not d['trialConfig']['practice']).itertuples()
         ]
 
+    def completed_task_rows(self):
+        for tr in self.task_rows():
+            if tr.skipped:
+                continue
+            yield tr
+
     @property
     def order_task_timeline(self):
         return self.config['light_order_timeline']

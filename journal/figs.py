@@ -2,9 +2,10 @@ import pathlib
 import os
 import pandas as pd
 import collections
-import types
 import dataclasses
 import seaborn as sns
+import numpy as np
+import scipy.stats
 
 import sys
 sys.path.append('..')
@@ -36,14 +37,35 @@ def save(fn, *args, **kwargs):
             **kwargs,
         )
 
-def pd_to_latex(df: pd.DataFrame):
+def pd_to_latex(df: pd.DataFrame, *, kwargs=dict(), midrule_hack=False):
+    if midrule_hack:
+        df = latex_table_midrule_hack(df)
+    kwargs.setdefault('index_names', False)
+    kwargs.setdefault('index', False)
+    kwargs.setdefault('escape', False)
     with pd.option_context('display.max_colwidth', 999999):
-        return df.to_latex(escape=False, index_names=False, index=False)
+        return df.to_latex(**kwargs)
         # lines = mcdf.to_latex(escape=False, index_names=False).split('\n')
         # print('\n'.join([
         #     f'\\rule{{0pt}}{{3em}}{line}[2em]\n\\hline' if r'\\' in line else line
         #     for line in lines
         # ]))
+
+def latex_table_midrule_hack(df):
+    '''
+    This is a slightly hacky way to add lines between every table row.
+    '''
+    assert isinstance(df, pd.DataFrame)
+    df = df.copy()
+    c = df.columns[0]
+    df[c] = [
+        # Skip first row
+        v if idx == 0 else
+        # Otherwise, prepend midrule
+        rf'\midrule {v}'
+        for idx, v in enumerate(df[c])
+    ]
+    return df
 
 def set_mpl_style():
     # Look at $PIP_ENV/lib/python3.9/site-packages/matplotlib/mpl-data/stylelib/classic.mplstyle
@@ -155,6 +177,16 @@ mdp_names = (
     ('maps', 6),
 )
 
+mdp_labels_and_names = [
+    (chr(idx+ord('a')), mdp_name)
+    for idx, mdp_name in enumerate(mdp_names)
+]
+
+mdp_name_to_label = {
+    mdp_name: label
+    for label, mdp_name in mdp_labels_and_names
+}
+
 mdps = tuple(
     lb.exp.mdp_from_name(mdp_name)
     for mdp_name in mdp_names
@@ -216,3 +248,67 @@ def anova(*, model, null):
     df = anova_df.npar[1] - anova_df.npar[0]
     assert df > 0, (df, anova_df.npar)
     print('anova', rf'$\chi^2({int(df)})={anova_row.Chisq:.2f}$, ${pvalue(anova_row["Pr(>Chisq)"])}$')
+
+def makecell(s, *, align=''):
+    if isinstance(s, str):
+        s = s.split('\n')
+    assert isinstance(s, (list, tuple))
+    s = r' \\ '.join(s)
+    if align:
+        align = f'[{align}]'
+    return fr'\makecell{align}{{{s}}}'
+
+def wrap_model_name(name):
+    '''
+    We generally only need to wrap this model name.
+    '''
+    return name.replace('grammar induction +', 'grammar induction\n+')
+
+def set_ax_size(w,h,ax):
+    # NOTE: Doesn't seem to work well
+    """ w, h: width, height in inches """
+    # https://stackoverflow.com/questions/44970010/axes-class-set-explicitly-size-width-height-of-axes-in-given-units
+    # if not ax: ax=plt.gca()
+    l = ax.figure.subplotpars.left
+    r = ax.figure.subplotpars.right
+    t = ax.figure.subplotpars.top
+    b = ax.figure.subplotpars.bottom
+    figw = float(w)/(r-l)
+    figh = float(h)/(t-b)
+    ax.figure.set_size_inches(figw, figh)
+
+def meansd(arr, *, percent=False, range=False):
+    M = np.mean(arr)
+    SD = np.std(arr)
+    if percent:
+        assert not range
+        print(f'$M={100*M:.0f}\\%$')
+    else:
+        r = f', range: {np.min(arr):.2f}--{np.max(arr):.2f}' if range else ''
+        print(f'${M=:.2f}$ ${SD=:.2f}$'+r)
+
+def spearmanr_permutation_test(x, y, *, n_resamples=100_000, report=False):
+    # from pearsonr example in https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.permutation_test.html
+    def statistic(x, y):
+        return scipy.stats.spearmanr(x, y).correlation
+    res = scipy.stats.permutation_test(
+        (x, y),
+        statistic,
+        vectorized=False,
+        permutation_type='pairings',
+        alternative='two-sided',
+        n_resamples=n_resamples,
+    )
+    if report:
+        report_spearmanr(len(x), res)
+    return res
+
+def report_spearmanr(n_obs, test_result):
+    print(rf'$\rho={test_result.statistic:.2f}$, ${pvalue(test_result.pvalue)}$, $N={n_obs}$')
+    # or https://www.statisticssolutions.com/reporting-statistics-in-apa-format/?
+    '''
+    (r(112) = .60, p = .012)
+    (rs(112) = .53, p < .001)
+    '''
+    # (\rho = .69, p < .001, N = 31)
+    # https://guides.library.lincoln.ac.uk/mash/statstest/spearman_rho_correlation
