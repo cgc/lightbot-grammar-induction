@@ -72,17 +72,20 @@ class BoundTypes(enum.Enum):
     def sample(cls, rng: np.random.RandomState, b):
         exp_scale = 2
         if b in (cls.pos, cls.pos_w0):
-            return rng.exponential(scale=exp_scale)
+            v = rng.exponential(scale=exp_scale)
         elif b in (cls.neg, cls.neg_w0):
-            return -rng.exponential(scale=exp_scale)
+            v = -rng.exponential(scale=exp_scale)
         elif b in (cls.prob, cls.prob_w0, cls.prob_w1, cls.prob_w01):
-            return rng.uniform()
+            v = rng.uniform()
         elif b in (cls.inverse_temperature,):
-            low, high = b.value
-            return np.clip(rng.exponential(scale=exp_scale), low, high)
+            v = rng.exponential(scale=exp_scale)
         elif b in (cls.unbounded,):
-            return rng.standard_t(df=exp_scale) # Kind of arbitrary choice to ensure wide tails?
-        assert False, b
+            v = rng.standard_t(df=exp_scale) # Kind of arbitrary choice to ensure wide tails?
+        else:
+            assert False, b
+        # We always clip to ensure we are in bounds.
+        low, high = b.value
+        return np.clip(v, low, high)
 
     @classmethod
     def in_bounds(cls, b, value):
@@ -577,6 +580,10 @@ class FitResult:
         assert self.observation_count is not None
         return self.dof * np.log(self.observation_count) - 2 * self.log_likelihood
 
+    @property
+    def free_parameters(self):
+        return set(self.result['final_args'].free_parameters)
+
     def likelihood_ratio_test(self, null: 'FitResult'):
         # https://stackoverflow.com/a/38249020
         from scipy.stats.distributions import chi2
@@ -585,8 +592,8 @@ class FitResult:
             return(2*(llmax-llmin))
 
         # We convert both to lists, since in some cases free_parameters is a dictionary, in others a list
-        self_params = set(self.result['final_args'].free_parameters)
-        null_params = set(null.result['final_args'].free_parameters)
+        self_params = self.free_parameters
+        null_params = null.free_parameters
         assert null_params.issubset(self_params), f'Expected null params ({null_params}) to be a subset of self params ({self_params})'
 
         LR = likelihood_ratio(null.log_likelihood, self.log_likelihood)
@@ -595,10 +602,19 @@ class FitResult:
 
     def __repr__(self):
         funs = [r['result'].fun for r in self.results]
+        best_fun = min(funs)
+        match_best_fun = sum(np.isclose(fun, best_fun) for fun in funs)
         succ = sum(r['result'].success for r in self.results)
         p = self.result['final_args'].short_repr()
+        # We set atol to be quite large here since it's common for optimal fits to have this amount of fluctuation.
+        match_best_params = sum(
+            np.allclose(r['final_args'].to_minimize_param(), self.result['final_args'].to_minimize_param(), atol=1e-3)
+            for r in self.results)
         elapsed = [r['elapsed_seconds'] for r in self.results]
-        return f'FitResult(range=[{min(funs):.02f}, {max(funs):.02f}], success={succ}/{len(self.results)}, best_params={p}, elapsed_sec_range=[{min(elapsed):.2f}, {max(elapsed):.2f}])'
+        return (
+            f'FitResult(range=[{best_fun:.02f}, {max(funs):.02f}], success={succ}/{len(self.results)}, reach_minima={match_best_fun}/{len(self.results)}, '
+            f'best_params={p}, match_best_params={match_best_params}/{len(self.results)}, elapsed_sec_range=[{min(elapsed):.2f}, {max(elapsed):.2f}])'
+        )
 
 
 def integrate_nuisance(fn, arg, nuisance_params):
@@ -638,6 +654,7 @@ def fit(
         debug=False,
         extra_dof=0,
         observation_count=None,
+        joblib_worker=None,
     ):
     if seed is None:
         seed = np.random.randint(0, 2**30)
@@ -687,7 +704,7 @@ def fit(
     args = [x00] + [
         Args.new(list(free_parameters.keys()), rng=rng, default_values=default_values) for _ in range(nsampled)
     ]
-    for arg in args:
+    def fit_for_arg(arg):
         if debug: print('x0', arg)
 
         start = time.time()
@@ -707,11 +724,15 @@ def fit(
             print(f'final args={args}')
             print()
 
-        results.append(dict(
+        return dict(
             result=r,
             final_args=args,
             elapsed_seconds=elapsed,
-        ))
+        )
+    if joblib_worker is None:
+        results = [fit_for_arg(arg) for arg in args]
+    else:
+        results = joblib_worker(joblib.delayed(fit_for_arg)(arg) for arg in args)
 
     return FitResult(
         seed=seed,
@@ -769,7 +790,7 @@ class DatasetRow:
         log_partition = logsumexp(unique_scores)
         distribution = np.exp(unique_scores - log_partition)
         normalized_sum = distribution.sum()
-        assert np.isclose(1, normalized_sum), f'sanity check for no numerical issues, but normalized sum was {normalized_sum}'
+        assert np.isclose(1, normalized_sum), f'sanity check for no numerical issues, but normalized sum was {normalized_sum} for args {a} and batch_score {batch_score}'
 
         return dict(
             distribution=distribution if return_distribution else None,
@@ -873,7 +894,17 @@ class Dataset:
         self.overrides = overrides
 
     @classmethod
-    def from_data(cls, data, search_params, *, overrides={}, parallel=False, load_from_cache=True):
+    def from_data(cls, data, search_params, *, overrides={}, parallel=False, load_from_cache=True, tag=None):
+        '''
+        overrides - task-specific changes to the search_params. Used to be used for task-specific limits, to make hardest problems solvable. Unused/deprecated.
+        '''
+        if overrides:
+            warnings.warn("Supplying overrides is deprecated -- avoid task-specific parameters", DeprecationWarning)
+
+        # We add support for tagging analyses, which gets added to the filename by the filename creation function, `_fn`.
+        if tag is not None:
+            search_params = dict(search_params, tag=tag)
+
         if 'quantile' in search_params:
             search_params.setdefault('topk', 10000)
         else:
@@ -897,7 +928,7 @@ class Dataset:
                 verbose=parallel_kws.get('verbose', 2))
 
         d = []
-        for mdp_name, full_cts in data.programs_by_count().items():
+        for mdp_name, full_cts in data.programs_by_count(canonical=search_params.get('canonical_programs', True)).items():
             params = dict(search_params, **overrides.get(mdp_name, {}))
 
             base_mdp = exp.mdp_from_name(mdp_name)
@@ -1042,6 +1073,7 @@ class Dataset:
             debug=debug,
             extra_dof=extra_dof,
             observation_count=self.observation_count(),
+            **kw,
         )
 
     def validate(self):
@@ -1058,10 +1090,25 @@ class Dataset:
                 recomputed = scoring.get_program_count_matrix(ps, x.mdp, tqdm_disable=True)
                 assert (existing == recomputed).all()
 
-def default_program_enumeration(D: exp.Data):
-    return Dataset.from_data(D, dict(topk=1000), load_from_cache=True)
+class Analyses:
+    default_kw = dict(topk=1000)
 
-def analysis(dc: Dataset):
+    @classmethod
+    def default(cls, D: exp.Data):
+        return Dataset.from_data(D, cls.default_kw)
+
+    @classmethod
+    def confound_no_canon(cls, D: exp.Data):
+        return Dataset.from_data(D, dict(cls.default_kw, canonical_programs=False))
+
+    @classmethod
+    def confound_no_prog_exp(cls, D: exp.Data):
+        assert all(p.programming_experience()['programming-exp'] == 'None' for p in D.participants)
+        return Dataset.from_data(D, cls.default_kw, tag='strict')
+
+default_program_enumeration = Analyses.default
+
+def analysis(dc: Dataset, *, fit_kwargs={}):
     fn = dc._fn(dc.search_params, dc.overrides, ext='-progll.bin.lzma')
 
     @CachedFile(fn)
@@ -1084,7 +1131,8 @@ def analysis(dc: Dataset):
             free_parameters=dict(b=1, prior_beta=1, p_normal=1/2, **reward_free_parameters),
             default_values=default_values,
             nuisance_params=nuisance_params,
-            debug=True)
+            debug=True,
+            **fit_kwargs)
         print(models['score_reuse_and_reward'])
 
         models['score_reuse'] = dc.fit(
@@ -1092,27 +1140,32 @@ def analysis(dc: Dataset):
             free_parameters=dict(b=1, prior_beta=1, p_normal=1/2),
             default_values=default_values,
             nuisance_params=nuisance_params,
-            debug=True)
+            debug=True,
+            **fit_kwargs)
         print(models['score_reuse'])
 
         models['score_mdl_and_reward'] = dc.fit(
             scoring.batch_score_mdl_and_reward,
-            free_parameters=dict(mdl_beta=1, **reward_free_parameters))
+            free_parameters=dict(mdl_beta=1, **reward_free_parameters),
+            **fit_kwargs)
         print(models['score_mdl_and_reward'])
 
         models['score_mdl'] = dc.fit(
             scoring.batch_score_mdl,
-            free_parameters=dict(mdl_beta=1))
+            free_parameters=dict(mdl_beta=1),
+            **fit_kwargs)
         print(models['score_mdl'])
 
         models['score_reward'] = dc.fit(
             scoring.batch_score_reward,
-            free_parameters=reward_free_parameters)
+            free_parameters=reward_free_parameters,
+            **fit_kwargs)
         print(models['score_reward'])
 
         models['score_null'] = dc.fit(
             scoring.batch_score_null,
-            free_parameters=dict())
+            free_parameters=dict(),
+            **fit_kwargs)
         print(models['score_null'])
 
         return models
