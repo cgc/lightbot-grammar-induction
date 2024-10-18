@@ -1,4 +1,4 @@
-joblib==1.1.0
+joblib==1.4.2
 jupyter==1.0.0
 matplotlib==3.5.1
 networkx==2.6.3

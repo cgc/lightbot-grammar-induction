@@ -219,6 +219,19 @@ def is_recursive(program, curr=None, stack=None):
 def hier_len(p):
     return len(p.main) + sum(len(sr) for sr in p.subroutines)
 
+def instruction_use_count(p):
+    cts = {i: 0 for i in INSTRUCTIONS}
+    def _ct(sr):
+        for inst in sr:
+            cts[inst] += 1
+    _ct(p.main)
+    for sr in p.subroutines:
+        _ct(sr)
+    return cts
+
+def sr_use_count(p):
+    ct = instruction_use_count(p)
+    return sum(ct[k] for k in PROCESS_INST)
 
 State = collections.namedtuple('State', [
     'position',
@@ -419,6 +432,16 @@ class EnvLoader:
 
 TraceState = collections.namedtuple('TraceState', ['trace', 'state', 'light_target'])
 
+def mdp_actions_for_trace_state_without_noop(mdp, s):
+    return [
+        a
+        for a in mdp.actions(s.state)
+        if not (
+            (s.trace + a)[-3:] in NO_OP_SEQUENCES or
+            (s.trace + a)[-2:] in NO_OP_SEQUENCES
+        )
+    ]
+
 class LightbotTrace(object):
     '''
     This class is a hierarchical lightbot instance, where each light being lit is a possible subgoal.
@@ -430,11 +453,7 @@ class LightbotTrace(object):
     def __init__(self, mdp):
         self.mdp = mdp
         self.lights = get_light_positions(mdp)
-
-        @functools.lru_cache(maxsize=None)
-        def mdp_next_state(s, a):
-            return self.mdp.next_state(s, a)
-        self._cached_mdp_next_state = mdp_next_state
+        self._cached_mdp_next_state = functools.lru_cache(maxsize=None)(lambda s, a: self.mdp.next_state(s, a))
 
     def initial_state(self):
         return TraceState('', self.mdp.initial_state(), None)
@@ -446,14 +465,7 @@ class LightbotTrace(object):
                 l for l in self.lights
                 if s.state.map_lit[self.mdp.map_light[l]] == CONST_MAP_LIT_FALSE]
         else:
-            return [
-                a
-                for a in self.mdp.actions(s.state)
-                if not (
-                    (s.trace + a)[-3:] in NO_OP_SEQUENCES or
-                    (s.trace + a)[-2:] in NO_OP_SEQUENCES
-                )
-            ]
+            return mdp_actions_for_trace_state_without_noop(self.mdp, s)
 
     def next_state_and_reward(self, s, a):
         if s.light_target is None:
@@ -471,3 +483,26 @@ class LightbotTrace(object):
     def reward(self, s, a, ns):
         ns, r = self.next_state_and_reward(s, a)
         return r
+
+SimpleTraceState = collections.namedtuple('SimpleTraceState', ['trace', 'state'])
+
+class SimpleLightbotTrace(object):
+    '''
+    This is a simpler version of a trace-based MDP, so that state includes a trace of actions.
+    It avoids the hierarchical structure of LightbotTrace.
+    '''
+    def __init__(self, mdp):
+        import functools
+        self.mdp = mdp
+        self._cached_mdp_next_state = functools.lru_cache(maxsize=None)(lambda s, a: self.mdp.next_state(s, a))
+
+    def initial_state(self):
+        return SimpleTraceState('', self.mdp.initial_state())
+    def is_terminal(self, s):
+        return self.mdp.is_terminal(s.state)
+    def actions(self, s):
+        return mdp_actions_for_trace_state_without_noop(self.mdp, s)
+    def next_state_and_reward(self, s, a):
+        ns = self._cached_mdp_next_state(s.state, a)
+        r = self.mdp.reward(s.state, a, ns)
+        return SimpleTraceState(s.trace + a, ns), r

@@ -54,7 +54,12 @@ def inline_subroutine_in_program(program, instruction):
 def inline_single_ref_and_dead_code(prog):
     # Inline routines called once, and remove "dead code", unused subroutines.
     # Could do more with dead code detection; recursion makes it possible to write noops after the recursive call
+    refcounts = subroutine_reference_count(prog)
+    prog = remove_unused_subroutines(refcounts, prog)
+    prog = inline_single_ref(refcounts, prog)
+    return prog
 
+def subroutine_reference_count(prog):
     recursion = False
 
     refcounts = collections.Counter()
@@ -77,6 +82,9 @@ def inline_single_ref_and_dead_code(prog):
 
     visit(prog.main, [])
 
+    return refcounts
+
+def remove_unused_subroutines(refcounts, prog):
     for instruction in envs.PROCESS_INST:
         if refcounts[instruction] == 0:
             prog = envs.Program(
@@ -87,6 +95,11 @@ def inline_single_ref_and_dead_code(prog):
                     for idx, p in enumerate(envs.IDX_TO_PROCESS)
                 ),
             )
+
+    return prog
+
+def inline_single_ref(refcounts, prog):
+    for instruction in envs.PROCESS_INST:
         if refcounts[instruction] == 1:
             prog = inline_subroutine_in_program(prog, instruction)
 
@@ -149,36 +162,57 @@ def without_dead_and_noop_instructions(mdp, p):
 
 
 
-def canonicalize_program(p, mdp=None):
+def canonicalize_program(p, mdp=None, *, change_counter=None):
+    if change_counter is None:
+        # If we aren't counting changes, we avoid wrapping functions.
+        def track_changes(f): return f
+    else:
+        idx = 0
+        def track_changes(f):
+            nonlocal idx
+            def wrapped(*args):
+                p = args[-1]
+                assert isinstance(p, envs.Program), 'Last argument to function must be a program'
+                new_p = f(*args)
+                if p != new_p:
+                    change_counter[f'step{idx}_{f.__name__}'] += 1
+                return new_p
+            idx += 1 # We assume returned wrapper is called before the next one is constructed
+            return wrapped
+
     # We first maximize subroutine use.
     # I think this makes sense, since it maximizes SR use given what people wrote.
     # However, single refs + no-ops will expose possible SR use sites, so this
     # function does not return a canonical program that is a fixed point.
     # TODO: Consider making this avoid SRs with 1 use?
-    p = ensure_max_subroutine_use(p)
+    p = track_changes(ensure_max_subroutine_use)(p)
 
     if mdp is not None:
-        p = without_dead_and_noop_instructions(mdp, p)
+        p = track_changes(without_dead_and_noop_instructions)(mdp, p)
     else:
         import warnings
         warnings.warn("Pass MDP to canonicalize_program(p, mdp) for processing")
 
     # Inline routines called once, and remove "dead code", unused subroutines.
-    p = inline_single_ref_and_dead_code(p)
+    refcounts = subroutine_reference_count(p)
+    p = track_changes(remove_unused_subroutines)(refcounts, p)
+    p = track_changes(inline_single_ref)(refcounts, p)
 
     # Handle subroutines containing only one instruction
-    p = inline_len1_subroutine(p)
+    p = track_changes(inline_len1_subroutine)(p)
 
     # Handles no-op sequences.
-    p = envs.Program(
-        main=replace_noop_sequences(p.main),
-        subroutines=[replace_noop_sequences(sr) for sr in p.subroutines],
-    )
+    p = track_changes(replace_noops)(p)
 
-    p = ReorderSubroutineVisitor.reorder_subroutines(p)
+    p = track_changes(ReorderSubroutineVisitor.reorder_subroutines)(p)
 
     return p
 
+def replace_noops(p):
+    return envs.Program(
+        main=replace_noop_sequences(p.main),
+        subroutines=tuple([replace_noop_sequences(sr) for sr in p.subroutines]),
+    )
 
 def canonicalized_trace(mdp, program):
     _, path = envs.interpret_program_record_path(mdp, program, state=mdp.initial_state())

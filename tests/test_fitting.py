@@ -21,18 +21,22 @@ def test_compute_scores_and_partition_and_crossent():
     })
 
     # Testing compute_scores_and_partition()
-    r = ts.compute_scores_and_partition(bs, a, batch_score=lb.scoring.batch_score_mdl)
+    row = lb.fitting.DatasetRow(None, None, bs, ts, None)
+    r = row.compute_scores_and_partition(a, batch_score=lb.scoring.batch_score_mdl)
     assert np.allclose(r['data_scores'], [-1, -2, -3])
     assert np.allclose(r['enum_scores'], [-2, -3, -4])
     expected = np.log(np.exp([-1, -2, -3, -4]).sum())
     assert np.isclose(r['log_partition'], expected), 'log partition should be computed based on unique programs across both bs and ts'
+    assert (row._data_not_in_enum == np.array([True, False, False])).all()
 
     # Testing crossent()
     expected = -sum(
         (-lb.hier_len(prog) - r['log_partition']) * ct
         for prog, ct in bs.program_counts.items()
     )
-    assert np.isclose(ts.crossent(bs, a, batch_score=lb.scoring.batch_score_mdl), expected)
+    assert np.isclose(row.crossent(a, batch_score=lb.scoring.batch_score_mdl), expected)
+    # A low-memory copy of the row can compute this too.
+    assert np.isclose(row.low_memory_copy().crossent(a, batch_score=lb.scoring.batch_score_mdl), expected)
 
     # Testing how fit() handles nuisance parameters
     dc = lb.Dataset([lb.fitting.DatasetRow(None, None, bs, ts, {})], {}, {})
@@ -47,6 +51,13 @@ def test_compute_scores_and_partition_and_crossent():
     ])
     expected_log_prob = np.log(np.mean(np.exp(log_probs_for_mdl_betas)))
     assert np.isclose(res.result['result'].fun, -expected_log_prob)
+
+    # Computing without logs as validation -- this math matches the text most closely.
+    expected_log_prob2 = np.log(np.mean([
+        np.prod(softmax(w * scores) ** counts)
+        for w in mdl_beta_values
+    ]))
+    assert np.isclose(expected_log_prob, expected_log_prob2)
 
     # This is a more in-depth test of various incorrect ways of computing the above, showing some inequalities between them.
     args = [lb.fitting.Args.new({}), dict(mdl_beta=mdl_beta_values)]
@@ -118,7 +129,10 @@ def test_logmeanexp():
     # At a sufficiently high scale, the largest contribution comes from the largest element
     assert np.isclose(lb.fitting.logmeanexp(values), scale * np.log(.9))
     # But at this high a scale, an implementation without a log-sum-exp trick will underflow
-    assert overunderflowing_lme(values) == -np.inf
+    with warnings.catch_warnings(record=True) as ws:
+        assert overunderflowing_lme(values) == -np.inf
+    assert len(ws) == 1
+    assert 'divide by zero encountered in log' in str(ws[0])
 
     # Correctly avoids overflow for very large values (from the exp)
     scale = 1e5

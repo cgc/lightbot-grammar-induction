@@ -1,3 +1,4 @@
+import dataclasses
 from dataclasses import dataclass
 from typing import Any, List
 from . import program_analysis
@@ -71,17 +72,20 @@ class BoundTypes(enum.Enum):
     def sample(cls, rng: np.random.RandomState, b):
         exp_scale = 2
         if b in (cls.pos, cls.pos_w0):
-            return rng.exponential(scale=exp_scale)
+            v = rng.exponential(scale=exp_scale)
         elif b in (cls.neg, cls.neg_w0):
-            return -rng.exponential(scale=exp_scale)
+            v = -rng.exponential(scale=exp_scale)
         elif b in (cls.prob, cls.prob_w0, cls.prob_w1, cls.prob_w01):
-            return rng.uniform()
+            v = rng.uniform()
         elif b in (cls.inverse_temperature,):
-            low, high = b.value
-            return np.clip(rng.exponential(scale=exp_scale), low, high)
+            v = rng.exponential(scale=exp_scale)
         elif b in (cls.unbounded,):
-            return rng.standard_t(df=exp_scale) # Kind of arbitrary choice to ensure wide tails?
-        assert False, b
+            v = rng.standard_t(df=exp_scale) # Kind of arbitrary choice to ensure wide tails?
+        else:
+            assert False, b
+        # We always clip to ensure we are in bounds.
+        low, high = b.value
+        return np.clip(v, low, high)
 
     @classmethod
     def in_bounds(cls, b, value):
@@ -307,9 +311,9 @@ class TraceSet(object):
 
     @classmethod
     def from_astar(cls, base_mdp, *, topk=None, f_upper_bound=None, include_equal_score=None, joblib_worker=None):
-        h_ = heuristics.make_heuristic_cost_navigation_to_mst(base_mdp)
-        h = lambda mdp, s, _: h_(mdp.mdp, s.state, light_target=s.light_target)
-        mdp = envs.LightbotTrace(base_mdp)
+        h_ = heuristics.make_shortest_path_heuristic(base_mdp)
+        h = lambda mdp, s, _: h_(mdp.mdp, s.state, _)
+        mdp = envs.SimpleLightbotTrace(base_mdp)
 
         kw = {}
         if topk is not None: kw['topk'] = topk
@@ -330,64 +334,6 @@ class TraceSet(object):
             return f'TraceSet #{len(self.traces)}'
         lens = [len(t) for t in self.traces]
         return f'TraceSet #{len(self.traces)} #programs={len(self.programs)} trace range {min(lens)}-{max(lens)} iters={self.astar_results.iteration_count} non-monotonic={self.astar_results.non_monotonic_counter}'
-
-    @functools.lru_cache
-    def _data_not_in_enum(self, data_programs):
-        data_not_in_enum = np.array([
-            program not in self.program_set
-            for program in data_programs
-        ], dtype=bool)
-        return data_not_in_enum
-
-    def compute_scores_and_partition(self, data: 'BehaviorSummary', a: Args, *, batch_score=None):
-        orig_batch_score = batch_score
-        def batch_score(programs, a, program_count_matrix, **kw):
-            return orig_batch_score(program_count_matrix, a.to_numba())
-
-        enum_scores = batch_score(
-            self.programs,
-            a,
-            base_mdp=self.mdp,
-            program_count_matrix=self.program_count_matrix,
-        )
-
-        data_scores = batch_score(
-            data.programs,
-            a,
-            base_mdp=self.mdp,
-            program_count_matrix=data.program_count_matrix,
-        )
-
-        data_not_in_enum = self._data_not_in_enum(data.programs)
-        assert len(data_scores) == len(data_not_in_enum)
-
-        unique_scores = np.concatenate([enum_scores, data_scores[data_not_in_enum]])
-        assert (len(self.program_set | data.program_set),) == unique_scores.shape, unique_scores.shape
-
-        log_partition = logsumexp(unique_scores)
-        normalized_sum = np.exp(unique_scores - log_partition).sum()
-        assert np.isclose(1, normalized_sum), f'sanity check for no numerical issues, but normalized sum was {normalized_sum}'
-
-        return dict(
-            enum_scores=enum_scores,
-            data_scores=data_scores,
-            log_partition=log_partition,
-        )
-
-
-    def crossent(self, data: 'BehaviorSummary', a: Args, *, batch_score=None, return_normalized_scores=False):
-        s = self.compute_scores_and_partition(data, a, batch_score=batch_score)
-        normalized_scores = s['data_scores'] - s['log_partition']
-        if return_normalized_scores:
-            return normalized_scores
-        crossent = 0
-        for pi, p in enumerate(data.programs):
-            ct = data.program_counts[p]
-            crossent += -ct * normalized_scores[pi]
-
-        assert not np.isinf(crossent)
-        assert not np.isnan(crossent)
-        return crossent
 
     def discrepancy_report(self, data: 'BehaviorSummary', *, show=False, brief=False):
         def _log(prefix, full_cts, full, *, print_missing=False):
@@ -465,7 +411,8 @@ class TraceSet(object):
         import pandas as pd
         from IPython.display import display, HTML
 
-        r = self.compute_scores_and_partition(data, a, batch_score=batch_score)
+        row = DatasetRow(None, None, data, self, None)
+        r = row.compute_scores_and_partition(a, batch_score=batch_score)
         data_scores = r['data_scores']
         enum_scores = r['enum_scores']
         logZ = r['log_partition']
@@ -633,6 +580,10 @@ class FitResult:
         assert self.observation_count is not None
         return self.dof * np.log(self.observation_count) - 2 * self.log_likelihood
 
+    @property
+    def free_parameters(self):
+        return set(self.result['final_args'].free_parameters)
+
     def likelihood_ratio_test(self, null: 'FitResult'):
         # https://stackoverflow.com/a/38249020
         from scipy.stats.distributions import chi2
@@ -641,8 +592,8 @@ class FitResult:
             return(2*(llmax-llmin))
 
         # We convert both to lists, since in some cases free_parameters is a dictionary, in others a list
-        self_params = set(self.result['final_args'].free_parameters)
-        null_params = set(null.result['final_args'].free_parameters)
+        self_params = self.free_parameters
+        null_params = null.free_parameters
         assert null_params.issubset(self_params), f'Expected null params ({null_params}) to be a subset of self params ({self_params})'
 
         LR = likelihood_ratio(null.log_likelihood, self.log_likelihood)
@@ -651,10 +602,19 @@ class FitResult:
 
     def __repr__(self):
         funs = [r['result'].fun for r in self.results]
+        best_fun = min(funs)
+        match_best_fun = sum(np.isclose(fun, best_fun) for fun in funs)
         succ = sum(r['result'].success for r in self.results)
         p = self.result['final_args'].short_repr()
+        # We set atol to be quite large here since it's common for optimal fits to have this amount of fluctuation.
+        match_best_params = sum(
+            np.allclose(r['final_args'].to_minimize_param(), self.result['final_args'].to_minimize_param(), atol=1e-3)
+            for r in self.results)
         elapsed = [r['elapsed_seconds'] for r in self.results]
-        return f'FitResult(range=[{min(funs):.02f}, {max(funs):.02f}], success={succ}/{len(self.results)}, best_params={p}, elapsed_sec_range=[{min(elapsed):.2f}, {max(elapsed):.2f}])'
+        return (
+            f'FitResult(range=[{best_fun:.02f}, {max(funs):.02f}], success={succ}/{len(self.results)}, reach_minima={match_best_fun}/{len(self.results)}, '
+            f'best_params={p}, match_best_params={match_best_params}/{len(self.results)}, elapsed_sec_range=[{min(elapsed):.2f}, {max(elapsed):.2f}])'
+        )
 
 
 def integrate_nuisance(fn, arg, nuisance_params):
@@ -694,6 +654,7 @@ def fit(
         debug=False,
         extra_dof=0,
         observation_count=None,
+        joblib_worker=None,
     ):
     if seed is None:
         seed = np.random.randint(0, 2**30)
@@ -743,7 +704,7 @@ def fit(
     args = [x00] + [
         Args.new(list(free_parameters.keys()), rng=rng, default_values=default_values) for _ in range(nsampled)
     ]
-    for arg in args:
+    def fit_for_arg(arg):
         if debug: print('x0', arg)
 
         start = time.time()
@@ -763,11 +724,15 @@ def fit(
             print(f'final args={args}')
             print()
 
-        results.append(dict(
+        return dict(
             result=r,
             final_args=args,
             elapsed_seconds=elapsed,
-        ))
+        )
+    if joblib_worker is None:
+        results = [fit_for_arg(arg) for arg in args]
+    else:
+        results = joblib_worker(joblib.delayed(fit_for_arg)(arg) for arg in args)
 
     return FitResult(
         seed=seed,
@@ -787,6 +752,82 @@ class DatasetRow:
     bs: BehaviorSummary
     ts: TraceSet
     elapsed: dict[str, float]
+
+    _data_not_in_enum: np.array = None
+
+
+    @property
+    def data_not_in_enum(self):
+        if self._data_not_in_enum is None:
+            self._data_not_in_enum = np.array([
+                program not in self.ts.program_set
+                for program in self.bs.programs
+            ], dtype=bool)
+
+            count_in_both = (~self._data_not_in_enum).sum()
+            # Comparing intersection to the result of _data_not_in_enum.
+            assert (len(self.ts.program_set & self.bs.program_set),) == count_in_both, count_in_both
+        return self._data_not_in_enum
+
+
+    def compute_scores_and_partition(self, a: Args, *, batch_score=None, return_distribution=False):
+        enum_scores = batch_score(
+            self.ts.program_count_matrix,
+            a.to_numba(),
+        )
+
+        data_scores = batch_score(
+            self.bs.program_count_matrix,
+            a.to_numba(),
+        )
+
+        assert len(data_scores) == len(self.data_not_in_enum)
+        unique_scores = np.concatenate([enum_scores, data_scores[self.data_not_in_enum]])
+        # Counting argument that we've accounted for all programs
+        count_in_both = (~self.data_not_in_enum).sum()
+        assert len(unique_scores) + count_in_both == len(data_scores) + len(enum_scores)
+
+        log_partition = logsumexp(unique_scores)
+        distribution = np.exp(unique_scores - log_partition)
+        normalized_sum = distribution.sum()
+        assert np.isclose(1, normalized_sum), f'sanity check for no numerical issues, but normalized sum was {normalized_sum} for args {a} and batch_score {batch_score}'
+
+        return dict(
+            distribution=distribution if return_distribution else None,
+            enum_scores=enum_scores,
+            data_scores=data_scores,
+            log_partition=log_partition,
+        )
+
+
+    def crossent(self, a: Args, *, batch_score=None, return_normalized_scores=False):
+        s = self.compute_scores_and_partition(a, batch_score=batch_score)
+        normalized_scores = s['data_scores'] - s['log_partition']
+        if return_normalized_scores:
+            return normalized_scores
+        crossent = 0
+        for pi, p in enumerate(self.bs.programs):
+            ct = self.bs.program_counts[p]
+            crossent += -ct * normalized_scores[pi]
+
+        assert not np.isinf(crossent)
+        assert not np.isnan(crossent)
+        return crossent
+
+    @dataclass
+    class DummyTraceSet:
+        program_count_matrix: np.array
+
+    def low_memory_copy(self):
+        '''
+        This is a bit of a hack, meant to facilitate parallel fitting of data. We avoid sending the full TraceSet to worker processes,
+        since model fitting can work by using only the program_count_matrix.
+        '''
+        assert isinstance(self.ts, TraceSet), 'Can only copy from original.'
+        # Ensure this property is computed before copying.
+        self.data_not_in_enum
+        assert self._data_not_in_enum is not None
+        return dataclasses.replace(self, ts=DatasetRow.DummyTraceSet(self.ts.program_count_matrix))
 
 
 class CachedFile:
@@ -853,7 +894,17 @@ class Dataset:
         self.overrides = overrides
 
     @classmethod
-    def from_data(cls, data, search_params, *, overrides={}, parallel=False, load_from_cache=True):
+    def from_data(cls, data, search_params, *, overrides={}, parallel=False, load_from_cache=True, tag=None):
+        '''
+        overrides - task-specific changes to the search_params. Used to be used for task-specific limits, to make hardest problems solvable. Unused/deprecated.
+        '''
+        if overrides:
+            warnings.warn("Supplying overrides is deprecated -- avoid task-specific parameters", DeprecationWarning)
+
+        # We add support for tagging analyses, which gets added to the filename by the filename creation function, `_fn`.
+        if tag is not None:
+            search_params = dict(search_params, tag=tag)
+
         if 'quantile' in search_params:
             search_params.setdefault('topk', 10000)
         else:
@@ -877,7 +928,7 @@ class Dataset:
                 verbose=parallel_kws.get('verbose', 2))
 
         d = []
-        for mdp_name, full_cts in data.programs_by_count().items():
+        for mdp_name, full_cts in data.programs_by_count(canonical=search_params.get('canonical_programs', True)).items():
             params = dict(search_params, **overrides.get(mdp_name, {}))
 
             base_mdp = exp.mdp_from_name(mdp_name)
@@ -984,8 +1035,9 @@ class Dataset:
             print(f'{name} {program_ct=} {missing_program_ct=} missing={100*missing_program_ct/program_ct:.2f}%')
 
     def crossent(self, args, *, batch_score=None):
+        # HACK: this is a convenience function that is redefined below for fit
         return sum([
-            res.ts.crossent(res.bs, args, batch_score=batch_score)
+            res.crossent(args, batch_score=batch_score)
             for res in self.d
         ])
 
@@ -996,9 +1048,16 @@ class Dataset:
             for prog, ct in res.bs.program_counts.items()
         ])
 
-    def fit(self, batch_score, *, debug=False, free_parameters=None, default_values={}, extra_dof=0, nuisance_params=None):
+    def fit(self, batch_score, *, debug=False, free_parameters=None, default_values={}, extra_dof=0, nuisance_params=None, **kw):
+        lmcs = [
+            res.low_memory_copy()
+            for res in self.d
+        ]
         def original_loss_fn(a):
-            return self.crossent(a, batch_score=batch_score)
+            return sum([
+                res.crossent(a, batch_score=batch_score)
+                for res in lmcs
+            ])
 
         if nuisance_params is None:
             loss_fn = original_loss_fn
@@ -1014,6 +1073,7 @@ class Dataset:
             debug=debug,
             extra_dof=extra_dof,
             observation_count=self.observation_count(),
+            **kw,
         )
 
     def validate(self):
@@ -1030,10 +1090,25 @@ class Dataset:
                 recomputed = scoring.get_program_count_matrix(ps, x.mdp, tqdm_disable=True)
                 assert (existing == recomputed).all()
 
-def default_program_enumeration(D: exp.Data):
-    return Dataset.from_data(D, dict(topk=1000), load_from_cache=True)
+class Analyses:
+    default_kw = dict(topk=1000)
 
-def analysis(dc: Dataset):
+    @classmethod
+    def default(cls, D: exp.Data):
+        return Dataset.from_data(D, cls.default_kw)
+
+    @classmethod
+    def confound_no_canon(cls, D: exp.Data):
+        return Dataset.from_data(D, dict(cls.default_kw, canonical_programs=False))
+
+    @classmethod
+    def confound_no_prog_exp(cls, D: exp.Data):
+        assert all(p.programming_experience()['programming-exp'] == 'None' for p in D.participants)
+        return Dataset.from_data(D, cls.default_kw, tag='strict')
+
+default_program_enumeration = Analyses.default
+
+def analysis(dc: Dataset, *, fit_kwargs={}):
     fn = dc._fn(dc.search_params, dc.overrides, ext='-progll.bin.lzma')
 
     @CachedFile(fn)
@@ -1056,7 +1131,8 @@ def analysis(dc: Dataset):
             free_parameters=dict(b=1, prior_beta=1, p_normal=1/2, **reward_free_parameters),
             default_values=default_values,
             nuisance_params=nuisance_params,
-            debug=True)
+            debug=True,
+            **fit_kwargs)
         print(models['score_reuse_and_reward'])
 
         models['score_reuse'] = dc.fit(
@@ -1064,27 +1140,32 @@ def analysis(dc: Dataset):
             free_parameters=dict(b=1, prior_beta=1, p_normal=1/2),
             default_values=default_values,
             nuisance_params=nuisance_params,
-            debug=True)
+            debug=True,
+            **fit_kwargs)
         print(models['score_reuse'])
 
         models['score_mdl_and_reward'] = dc.fit(
             scoring.batch_score_mdl_and_reward,
-            free_parameters=dict(mdl_beta=1, **reward_free_parameters))
+            free_parameters=dict(mdl_beta=1, **reward_free_parameters),
+            **fit_kwargs)
         print(models['score_mdl_and_reward'])
 
         models['score_mdl'] = dc.fit(
             scoring.batch_score_mdl,
-            free_parameters=dict(mdl_beta=1))
+            free_parameters=dict(mdl_beta=1),
+            **fit_kwargs)
         print(models['score_mdl'])
 
         models['score_reward'] = dc.fit(
             scoring.batch_score_reward,
-            free_parameters=reward_free_parameters)
+            free_parameters=reward_free_parameters,
+            **fit_kwargs)
         print(models['score_reward'])
 
         models['score_null'] = dc.fit(
             scoring.batch_score_null,
-            free_parameters=dict())
+            free_parameters=dict(),
+            **fit_kwargs)
         print(models['score_null'])
 
         return models

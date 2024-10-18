@@ -283,6 +283,12 @@ class Participant(object):
             for row in self.filtered_rows(lambda d: d['trial_type'] == 'LightbotTask' and not d['trialConfig']['practice']).itertuples()
         ]
 
+    def completed_task_rows(self):
+        for tr in self.task_rows():
+            if tr.skipped:
+                continue
+            yield tr
+
     @property
     def order_task_timeline(self):
         return self.config['light_order_timeline']
@@ -441,6 +447,9 @@ class Data(object):
                 'Between 1 and 3 college courses (or equivalent)',
                 # 'More than 3 college courses (or equivalent)',
             }
+        elif include == 'strict':
+            # To address reviews, testing strict exclusion of programmers.
+            include = {'None'}
 
         completed = self.workers_task_completed()
 
@@ -452,7 +461,7 @@ class Data(object):
             if p.programming_experience()['programming-exp']  in include
         }
 
-    def qualified(self, *, debug=True):
+    def qualified(self, *, debug=True, strict=False):
         modal_seq = self.modal_trial_sequence()
         modal_count = len(modal_seq)
         modal_workers = self.workers_task_completed()
@@ -460,7 +469,7 @@ class Data(object):
         if debug:
             print(f'Modal row count {modal_count}. # matching {len(modal_workers)} / {len(self.participants)}')
 
-        no_programming = self.workers_programming_experience()
+        no_programming = self.workers_programming_experience(include='strict' if strict else None)
 
         if debug:
             print(f'# with no programming {len(no_programming)} / {len(self.participants)}')

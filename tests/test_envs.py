@@ -128,3 +128,50 @@ def test_is_recursive():
     assert lb.is_recursive(lb.Program(main='1', subroutines=('A1', '')))
     assert lb.is_recursive(lb.Program(main='1', subroutines=('A2', 'B1')))
     assert not lb.is_recursive(lb.Program(main='11', subroutines=('22', '33', '44', 'A')))
+
+def test_instruction_use_count():
+    assert (
+        lb.envs.instruction_use_count(lb.tools.mkprog('1AB2', 'C', 'B1', 'E')) ==
+        {'A': 1, 'B': 2, 'C': 1, 'D': 0, 'E': 1, '1': 2, '2': 1, '3': 0, '4': 0})
+
+def test_sr_use_count():
+    assert lb.envs.sr_use_count(lb.tools.mkprog('A')) == 0
+    assert lb.envs.sr_use_count(lb.tools.mkprog('A', 'B', 'C', 'D', 'E')) == 0
+    assert lb.envs.sr_use_count(lb.tools.mkprog('111A', '2')) == 4
+
+def test_trace():
+    base_mdp = lb.EnvLoader.maps[0]
+
+    # Hierarchical one
+    mdp = lb.LightbotTrace(base_mdp)
+    s = mdp.initial_state()
+    assert s.light_target is None
+    s = mdp.next_state(s, (3, 2))
+    assert s.light_target == (3, 2)
+    s = mdp.next_state(s, 'C')
+    assert s.light_target == (3, 2)
+    s = mdp.next_state(s, 'C')
+    assert s.light_target == (3, 2)
+    s = mdp.next_state(s, 'C')
+    assert s.light_target == (3, 2)
+    s = mdp.next_state(s, 'A')
+    assert s.light_target is None
+    assert mdp.is_terminal(s)
+    assert s.trace == 'CCCA'
+
+    # Simple one
+    mdp = lb.SimpleLightbotTrace(base_mdp)
+    s = mdp.initial_state()
+    s, _ = mdp.next_state_and_reward(s, 'C')
+    s, _ = mdp.next_state_and_reward(s, 'C')
+    s, _ = mdp.next_state_and_reward(s, 'C')
+    s, _ = mdp.next_state_and_reward(s, 'A')
+    assert mdp.is_terminal(s)
+    assert s.trace == 'CCCA'
+
+    # testing no-ops -- focusing on left,right and right,left
+    s0 = mdp.initial_state()
+    s, _ = mdp.next_state_and_reward(s0, 'D')
+    assert mdp.actions(s) == ['B', 'C', 'D']
+    s, _ = mdp.next_state_and_reward(s0, 'E')
+    assert mdp.actions(s) == ['B', 'C', 'E']

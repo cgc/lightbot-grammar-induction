@@ -1,5 +1,6 @@
 import numpy as np
 import lb
+from journal.figs import mdp_names
 
 class Graph(object):
     def __init__(self, adj, initial, goal, *, path=False, step_reward=-1):
@@ -48,6 +49,7 @@ def test_astar():
     # Every location * direction is visited
     assert v.iteration_count == np.prod(bleacher.map_h.shape) * len(lb.DIRECTIONS)
 
+def test_astar_topk():
     # This is a more complex test of the topk kwarg of astar.
     g = Graph({
         0: [1, 3, 5, 7],
@@ -82,6 +84,84 @@ def test_astar():
     assert {r.state for r in lb.search.astar(g, no_heuristic, topk=100, drop_infinite_cost=False).results} == set(paths)
     assert {r.state for r in lb.search.astar(g, no_heuristic, topk=100).results} == {paths[0]}
 
+def _exhaustive_enumeration(mdp, *, limit=None):
+    assert isinstance(mdp, lb.envs.SimpleLightbotTrace)
+    curr = [mdp.initial_state()]
+    results = []
+    for _ in range(limit):
+        next_ = []
+        for s in curr:
+            for a in mdp.actions(s):
+                if a == lb.INSTRUCTIONS.JUMP: continue
+                ns, r = mdp.next_state_and_reward(s, a)
+                if r == mdp.mdp.noop_reward: continue
+                if mdp.is_terminal(ns):
+                    results.append(ns.trace)
+                else:
+                    next_.append(ns)
+        curr = next_
+    return results
+
+def test_astar_topk_lightbot():
+    no_heuristic = lambda *args: 0
+    mdp = lb.EnvLoader.maps[0]
+    mdp.noop_reward = float('-inf')
+
+    # Incomplete enumeration of routes without trace-based MDP
+    r = lb.search.astar(mdp, no_heuristic, topk=2, include_equal_score=True)
+    assert [rr.score for rr in r.results] == [4, 9, 9]
+
+    # We need trace-based MDP for full enumeration of routes
+    r = lb.search.astar(lb.envs.SimpleLightbotTrace(mdp), no_heuristic, topk=2, include_equal_score=True)
+    dev_l = 'LWR'
+    dev_l_end = 'RWS'
+    dev_r = 'RWL'
+    dev_r_end = 'LWS'
+    assert {
+        rr.state.trace
+        for rr in r.results
+    } == {lb.tools.mkinst(t) for t in [
+        'WWWS',
+        f'{dev_l}WWW{dev_l_end}',
+        f'{dev_r}WWW{dev_r_end}',
+        f'W{dev_l}WW{dev_l_end}',
+        f'W{dev_r}WW{dev_r_end}',
+        f'WW{dev_l}W{dev_l_end}',
+        f'WW{dev_r}W{dev_r_end}',
+    ]}
+
+    # Here's another test case.
+    mdp = lb.LightbotMap(
+        np.array([
+            [0, 0, 0],
+            [0, 0, 0],
+            [0, 0, 0],
+        ]),
+        np.array([
+            [-1, -1, -1],
+            [-1, -1, -1],
+            [-1, -1, 0],
+        ]),
+        (0, 0),
+        1,
+    )
+    mdp.noop_reward = float('-inf')
+
+    wrapped_mdp = lb.envs.SimpleLightbotTrace(mdp)
+
+    r = lb.search.astar(wrapped_mdp, no_heuristic, topk=4, include_equal_score=True)
+    assert {
+        rr.state.trace
+        for rr in r.results
+    } == {lb.tools.mkinst(t) for t in [
+        'WWLWWS',
+        'WLWWRWS',
+        'LWWRWWS',
+        'WLWRWLWS',
+        'LWRWWLWS',
+    ]} == set(_exhaustive_enumeration(wrapped_mdp, limit=8))
+
+
 class RomaniaSubsetAIMA:
     '''
     This small weighted graph is from Figure 3.15 in Artificial Intelligence: A Modern Approach, 3rd edition.
@@ -110,3 +190,41 @@ def test_astar_costs():
     def no_heuristic(*args): return 0
     v = lb.search.astar(RomaniaSubsetAIMA(), no_heuristic, return_path=True)
     assert v.result.path == RomaniaSubsetAIMA.optimal_path
+
+def test_heuristics_match():
+    topk = 1000
+    # NOTE: To test that the heuristics match for all maps, comment this out.
+    # Keeping this reduced list for now to keep the test fast.
+    mdp_names = [('maps', 8)]
+
+    for mdp_name in mdp_names:
+        print(f'\n{mdp_name}')
+        mdp = lb.exp.mdp_from_name(mdp_name)
+        mdp.noop_reward = float('-inf')
+
+        # Search with new heuristic based on shortest paths
+
+        with lb.fitting.timed('make heuristic'):
+            heuristic_cost = lb.heuristics.make_shortest_path_heuristic(mdp)
+            h = lambda mdp, state, _: heuristic_cost(mdp.mdp, state.state, _)
+
+        with lb.fitting.timed('A* with shortest path heuristic'):
+            wrapped_mdp = lb.envs.SimpleLightbotTrace(mdp)
+            res = lb.search.astar(wrapped_mdp, h, topk=topk, include_equal_score=True)
+        assert res.non_monotonic_counter == 0
+
+        # Now using old TSP/MST heuristic
+
+        mst_h = lb.heuristics.make_heuristic_cost_navigation_to_mst(mdp)
+        h = lambda wrapped_mdp, s, _: mst_h(wrapped_mdp.mdp, s.state, light_target=s.light_target)
+
+        with lb.fitting.timed('A* with TSP heuristic'):
+            wrapped_mdp = lb.envs.LightbotTrace(mdp)
+            res2 = lb.search.astar(wrapped_mdp, h, topk=topk, include_equal_score=True)
+        assert res2.non_monotonic_counter == 0
+
+        # Assert match
+        assert len(res.results) == len(res2.results)
+        assert (
+            {(r.score, r.state.trace) for r in res.results} ==
+            {(r.score, r.state.trace) for r in res2.results})

@@ -9,13 +9,14 @@ pyp_process_prior = prior.pyp_process_prior
 
 def _pyp_process_prior(p, a, b, p_normal, p_end, p_subprocess_end):
     logp = pyp_process_prior(p, a, b, p_normal, p_end, p_subprocess_end)
-    batch_logp = lb.scoring.batch_pyp_process_prior(lb.scoring.get_program_count_matrix([p], None), a, b, p_normal, p_end, p_subprocess_end)[0]
-
-    assert np.isclose(logp, batch_logp), 'difference between batch and non-batch prior' + str((p, (a, b, p_normal, p_end, p_subprocess_end), logp, batch_logp))
+    pcm = lb.scoring.get_program_count_matrix([p], None)
+    for kw in [{}, dict(precompute_gamma=False), dict(precompute_gamma=True)]:
+        batch_logp = lb.scoring.batch_pyp_process_prior(pcm, a, b, p_normal, p_end, p_subprocess_end, **kw)[0]
+        assert np.isclose(logp, batch_logp), 'difference between batch and non-batch prior' + str((p, (a, b, p_normal, p_end, p_subprocess_end), logp, batch_logp))
     return logp
 
 
-def test_pyp_prior():
+def test_pyp_prior_NOTE_deprecated():
     p_normal = 1/3
     assert np.isclose(
         pyp_process_prior(lb.Program('AA', ('',)), 0, 0, p_normal=p_normal, use_deprecated=True),
@@ -72,7 +73,7 @@ def test_pyp_prior():
             p_normal * 1/5))
 
 
-def test_pyp_prior_p_end():
+def test_pyp_prior_p_end_NOTE_deprecated():
     p_normal = 1/3
     p_end = 1/7
     assert np.isclose(
